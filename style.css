@@ -20549,3 +20549,202 @@ body.nav-open .header_floating-wrap .navbar_floating-container {
     box-sizing: border-box !important;
   }
 }
+
+
+/* ==========================================================================
+   1. REMOVE SEARCH ICON FROM HEADER ON DESKTOP & MOBILE (USER REQUEST)
+   ========================================================================== */
+.nav-search-trigger,
+#nav-search-trigger,
+button.nav-search-trigger {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   2. FIX MOBILE SIDEBAR BACKDROP: NO BLUR, NO STICKING (USER REQUEST)
+   ========================================================================== */
+.mobile-nav-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(10, 28, 44, 0.65) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  display: none !important;
+  transition: opacity 0.25s ease !important;
+}
+
+.mobile-nav-backdrop.active {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 99998 !important;
+}
+
+/* ==========================================================================
+   3. PERFECT FIX FOR INNER PAGES HERO (EXPLORE, LIVE, INVEST, EAT, CONTACT)
+   ========================================================================== */
+.hero-image-exact.inner-hero {
+  position: relative !important;
+  min-height: 62vh !important;
+  padding-top: 155px !important;
+  padding-bottom: 75px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+/* Container MUST be full-width column, left-aligned */
+.hero-image-content-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: var(--container-max-width, 1320px) !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* Text block MUST be column */
+.hero-text-block {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  max-width: 720px !important;
+  width: 100% !important;
+}
+
+.hero-main-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+  font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  color: #FFFFFF !important;
+  margin: 0 0 16px 0 !important;
+  text-align: left !important;
+}
+
+.hero-highlight-title {
+  color: #D9A441 !important;
+}
+
+.hero-tagline-desc {
+  font-family: var(--font-body, 'Manrope', sans-serif) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin: 0 0 24px 0 !important;
+  max-width: 640px !important;
+  text-align: left !important;
+}
+
+/* Buttons Container: Clean Left Row on Desktop, Column on Mobile */
+.hero-action-pair {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Both Buttons Identical Size & Padding */
+.hero-btn-primary,
+.hero-btn-story {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  padding: 0 28px !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  min-width: 200px !important;
+}
+
+.hero-btn-primary {
+  background-color: var(--zn-crimson, #C43D46) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(196, 61, 70, 0.35) !important;
+}
+
+.hero-btn-story {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+}
+
+.hero-btn-story .story-play-circle {
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline-flex !important;
+  margin: 0 4px 0 0 !important;
+  box-shadow: none !important;
+}
+
+/* Responsive Mobile Adjustments for Inner Hero */
+@media (max-width: 768px) {
+  .hero-image-exact.inner-hero {
+    min-height: auto !important;
+    padding-top: 115px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .hero-image-content-container {
+    padding: 0 16px !important;
+  }
+
+  .hero-main-title {
+    font-size: 2.1rem !important;
+  }
+
+  .hero-tagline-desc {
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-action-pair {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-story {
+    width: auto !important;
+    min-width: 200px !important;
+    margin: 0 !important;
+  }
+}
