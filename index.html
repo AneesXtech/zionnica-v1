@@ -725,8 +725,8 @@
             </div>
           </div>
 
-          <div style="margin-top: 26px;">
-            <a href="invest.html" class="cta_btn-primary">
+          <div style="margin-top: 32px;">
+            <a href="invest.html" class="floating-cta-btn" style="padding: 14px 34px !important; font-size: 0.98rem !important; display: inline-flex !important;">
               <span>Find a resource</span>
               <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -847,19 +847,24 @@
          SECTION 10: NEWSLETTER
          Full-width colored section using existing project color
          ========================================================================== -->
-    <section class="nm-newsletter-section" id="newsletter">
-      <div class="container-large padding-global">
+        <!-- ==========================================================================
+         SECTION 10: NEWSLETTER
+         Photographic background with dark overlay
+         ========================================================================== -->
+    <section class="nm-newsletter-section" id="newsletter" style="position: relative; background: url('img/IMG-20260909-WA0005.jpg') center/cover no-repeat; padding: 100px 0; border: none; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 43, 67, 0.90) 0%, rgba(16, 43, 67, 0.95) 100%); z-index: 1;"></div>
+      <div class="container-large padding-global" style="position: relative; z-index: 2;">
         
         <div class="nm-newsletter-wrap reveal-on-scroll">
-          <div class="editorial_eyebrow-badge">
-            <span class="editorial_eyebrow-dash"></span>
-            <span class="editorial_eyebrow-text">WEEKLY ADVICE</span>
-            <span class="editorial_eyebrow-dash"></span>
+          <div class="editorial_eyebrow-badge" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.25);">
+            <span class="editorial_eyebrow-dash" style="background: #D9A441;"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">WEEKLY ADVICE</span>
+            <span class="editorial_eyebrow-dash" style="background: #D9A441;"></span>
           </div>
 
-          <h2 class="nm-newsletter-title">Get my free Nicaragua starter notes</h2>
+          <h2 class="nm-newsletter-title" style="color: #FFFFFF !important; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Get my free Nicaragua starter notes</h2>
 
-          <p class="nm-newsletter-desc">
+          <p class="nm-newsletter-desc" style="color: rgba(255, 255, 255, 0.92) !important;">
             Practical advice on routes, border crossings, safety, real costs, and favorite local spots—sent straight to your inbox without spam or fluff.
           </p>
 
@@ -869,48 +874,14 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="New Subscriber to Nicaragua Starter Notes">
             
-            <input type="email" name="email" class="nm-newsletter-input" placeholder="Enter your email address" required aria-label="Your email address">
-            <button type="submit" class="cta_btn-primary nm-newsletter-btn">
+            <input type="email" name="email" class="nm-newsletter-input" placeholder="Enter your email address" required aria-label="Your email address" style="background: #FFFFFF; color: #102B43;">
+            <button type="submit" class="floating-cta-btn" style="padding: 14px 28px !important; cursor: pointer; border: none;">
               <span>Send me tips</span>
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
           </form>
         </div>
 
-      </div>
-    </section>
-
-
-    <!-- ==========================================================================
-         SECTION 11: CLOSING CTA (Photographic Background with Dark Overlay)
-         Consistent with all inner pages
-         ========================================================================== -->
-    <section class="section_final-cta" id="contact" style="background-image: url('img/IMG-20260909-WA0005.jpg');">
-      <div class="final-cta_dark-overlay"></div>
-      <div class="padding-global final-cta_content-layer">
-        <div class="container-large text-center">
-          <div class="final-cta_box reveal-on-scroll">
-            <div class="final-cta_eyebrow-badge">
-              <span class="cta_eyebrow-dash"></span>
-              <span class="cta_eyebrow-text">UNTIL NEXT TIME</span>
-              <span class="cta_eyebrow-dash"></span>
-            </div>
-            <h2 class="final-cta_heading">Maybe One Day I'll See You Somewhere in Nicaragua.</h2>
-            <p class="final-cta_description">
-              Until then, explore the destinations, check the lifestyle realities, and start dreaming up your next journey.
-            </p>
-            <div class="final-cta_buttons-wrap">
-              <a href="explore.html" class="cta_btn-primary">
-                <span>Explore Nicaragua</span>
-                <i class="fa-solid fa-compass" aria-hidden="true"></i>
-              </a>
-              <a href="contact.html" class="cta_btn-secondary">
-                <span>Let's Connect</span>
-                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
