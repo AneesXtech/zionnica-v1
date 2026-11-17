@@ -19944,18 +19944,95 @@ section,
     padding-bottom: 50px;
   }
 
+  .nm-hero {
+    min-height: auto !important;
+    padding-top: 105px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .nm-hero-title {
+    font-size: clamp(1.85rem, 6.2vw, 2.35rem) !important;
+    line-height: 1.18 !important;
+    margin: 14px 0 12px 0 !important;
+  }
+
+  .nm-hero-subtitle {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Sleek, Single-Pill Mobile Search Bar */
+  .nm-hero-search-form {
+    margin-bottom: 18px !important;
+    width: 100% !important;
+  }
+
   .nm-hero-search-box {
-    flex-direction: column;
-    align-items: stretch;
-    border-radius: 16px;
-    padding: 12px 14px;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: #FFFFFF !important;
+    border-radius: 9999px !important;
+    padding: 5px 6px 5px 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .nm-search-icon {
+    font-size: 1rem !important;
+    color: #627D98 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .nm-search-input {
+    flex: 1 !important;
+    min-width: 0 !important;
+    font-size: 0.88rem !important;
+    padding: 8px 0 !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    color: #102B43 !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+
+  .nm-search-input::placeholder {
+    font-size: 0.85rem !important;
+    color: #627D98 !important;
   }
 
   .nm-hero-search-box .nm-search-btn {
-    align-self: center;
+    flex-shrink: 0 !important;
+    padding: 9px 18px !important;
+    font-size: 0.88rem !important;
+    border-radius: 9999px !important;
+    height: auto !important;
+    min-height: auto !important;
+    min-width: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin: 0 !important;
+    align-self: center !important;
     width: auto !important;
-    max-width: max-content !important;
+  }
+
+  /* Popular quick links wrapped cleanly */
+  .nm-hero-popular {
+    gap: 8px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .nm-popular-pill {
+    padding: 5px 12px !important;
+    font-size: 0.8rem !important;
   }
 
   .nm-tiles-grid {
@@ -20307,4 +20384,134 @@ section,
     min-height: 240px !important;
     max-height: 320px !important;
   }
+}
+
+/* ==========================================================================
+   1. HERO DESKTOP HEIGHT & PADDING FIX (NO CROPPING)
+   ========================================================================== */
+.nm-hero {
+  position: relative !important;
+  min-height: 95vh !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  padding-top: 165px !important;
+  padding-bottom: 100px !important;
+  background-color: var(--zn-navy, #102B43) !important;
+}
+
+.nm-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  background-size: cover !important;
+  background-position: center 25% !important;
+  z-index: 1 !important;
+}
+
+/* ==========================================================================
+   2. HOME PAGE BUTTONS MATCH HEADER PILL STYLE
+   ========================================================================== */
+.nm-action-btn,
+.nm-hero-search-box .nm-search-btn,
+.nm-newsletter-btn,
+.cta_btn-primary {
+  border-radius: 9999px !important;
+  font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+  font-weight: 700 !important;
+  background-color: var(--zn-crimson, #C43D46) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(196, 61, 70, 0.35) !important;
+}
+
+/* ==========================================================================
+   3. INNER PAGES STRICT LEFT-ALIGNMENT & IDENTICAL BUTTON SIZES (USER REQUEST)
+   ========================================================================== */
+.inner-hero .hero-text-block,
+.inner-hero .hero-image-content-container,
+.inner-hero .hero-action-pair,
+.hero-image-content-container .hero-action-pair,
+.hero-action-pair {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  text-align: left !important;
+}
+
+/* Identical Dimensions, Height & Padding for Both Buttons (Desktop & Mobile) */
+.hero-btn-primary,
+.hero-btn-story,
+.inner-hero .hero-btn-primary,
+.inner-hero .hero-btn-story {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: 50px !important;
+  height: 50px !important;
+  padding: 0 28px !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  min-width: 210px !important;
+  max-width: 100% !important;
+}
+
+.hero-btn-primary {
+  background-color: var(--zn-crimson, #C43D46) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(196, 61, 70, 0.35) !important;
+}
+
+.hero-btn-story {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.hero-btn-story .story-play-circle {
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 4px !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.hero-btn-story:hover {
+  background-color: #FFFFFF !important;
+  color: var(--zn-navy, #102B43) !important;
+  border-color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   4. HIDE UNDERLYING HEADER PILL COMPLETELY WHEN MOBILE DRAWER IS OPEN
+   ========================================================================== */
+body.nav-open .header_floating-wrap {
+  pointer-events: none !important;
+}
+
+body.nav-open .header_floating-wrap .floating-logo,
+body.nav-open .header_floating-wrap .brand-official-logo,
+body.nav-open .header_floating-wrap .floating-mobile-toggle,
+body.nav-open .header_floating-wrap .floating-cta-btn,
+body.nav-open .header_floating-wrap .floating-nav-actions,
+body.nav-open .header_floating-wrap .navbar_floating-container {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
