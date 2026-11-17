@@ -21184,3 +21184,192 @@ button.nav-search-trigger {
     box-shadow: 0 4px 18px rgba(196, 61, 70, 0.3) !important;
   }
 }
+
+
+/* ==========================================================================
+   100% FULL-WIDTH PURE WHITE MENU DRAWER: SLIDE & FADE-IN FROM RIGHT (USER REQUEST)
+   ZERO BLUR, ZERO DARK OVERLAY, ZERO BACKDROP CONFLICT
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Prevent horizontal leaking */
+  html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  /* 1. Eliminate the backdrop completely so it NEVER darkens or blurs the menu */
+  .mobile-nav-backdrop,
+  .mobile-nav-backdrop.active,
+  #mobile-nav-backdrop {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+    z-index: -1 !important;
+  }
+
+  /* 2. Header stacking context */
+  header.header_floating-wrap,
+  .header_floating-wrap,
+  .header_floating-wrap.scrolled {
+    z-index: 9999999 !important;
+  }
+
+  /* 3. Pure 100% Crisp White Full-Width Menu Drawer Sliding & Fading from RIGHT */
+  .floating-nav-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+    display: none !important;
+    flex-direction: column !important;
+    padding: 20px 24px 34px 24px !important;
+    box-sizing: border-box !important;
+    z-index: 10000000 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    opacity: 0 !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(100%) !important; /* Slide off to the RIGHT */
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease !important;
+  }
+
+  /* Active: 100% Full Width pure crisp white from RIGHT */
+  .floating-nav-menu.active {
+    display: flex !important;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+  }
+
+  /* Top Bar inside Drawer */
+  .mobile-sidebar-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 16px !important;
+    border-bottom: 1.5px solid rgba(16, 43, 67, 0.08) !important;
+    width: 100% !important;
+    background: #FFFFFF !important;
+  }
+
+  .mobile-sidebar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .mobile-sidebar-logo {
+    height: 38px !important;
+    width: auto !important;
+  }
+
+  .mobile-sidebar-name {
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 800 !important;
+    font-size: 1.25rem !important;
+    color: #102B43 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .mobile-sidebar-close {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    background: #F1F5F9 !important;
+    border: 1.5px solid #CBD5E1 !important;
+    color: #102B43 !important;
+    font-size: 1.25rem !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
+  }
+
+  .mobile-sidebar-close:hover {
+    background: #C43D46 !important;
+    color: #FFFFFF !important;
+    border-color: #C43D46 !important;
+    transform: rotate(90deg) !important;
+  }
+
+  /* Navigation Links inside Drawer */
+  .mobile-sidebar-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    background: #FFFFFF !important;
+  }
+
+  .floating-nav-menu .nav-item {
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    color: #102B43 !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(16, 43, 67, 0.04) !important;
+    background: #FFFFFF !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+
+  .floating-nav-menu .nav-item:hover,
+  .floating-nav-menu .nav-item.active {
+    background: rgba(196, 61, 70, 0.08) !important;
+    color: #C43D46 !important;
+  }
+
+  /* Bottom CTA */
+  .mobile-sidebar-footer {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+    padding-top: 16px !important;
+    border-top: 1.5px solid rgba(16, 43, 67, 0.08) !important;
+    width: 100% !important;
+    background: #FFFFFF !important;
+  }
+
+  .mobile-sidebar-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    background: #C43D46 !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    padding: 15px 24px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 18px rgba(196, 61, 70, 0.3) !important;
+  }
+}
