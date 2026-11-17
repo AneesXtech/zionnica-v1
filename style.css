@@ -20501,16 +20501,18 @@ section,
 /* ==========================================================================
    4. HIDE UNDERLYING HEADER PILL COMPLETELY WHEN MOBILE DRAWER IS OPEN
    ========================================================================== */
-body.nav-open .header_floating-wrap {
-  pointer-events: none !important;
+/* When mobile drawer is open, keep drawer visible while hiding underlying pill buttons */
+body.nav-open .navbar_floating-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-body.nav-open .header_floating-wrap .floating-logo,
-body.nav-open .header_floating-wrap .brand-official-logo,
-body.nav-open .header_floating-wrap .floating-mobile-toggle,
-body.nav-open .header_floating-wrap .floating-cta-btn,
-body.nav-open .header_floating-wrap .floating-nav-actions,
-body.nav-open .header_floating-wrap .navbar_floating-container {
+body.nav-open .floating-logo,
+body.nav-open .brand-official-logo,
+body.nav-open .floating-mobile-toggle,
+body.nav-open .floating-cta-btn,
+body.nav-open .floating-nav-actions {
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
@@ -20746,5 +20748,182 @@ button.nav-search-trigger {
     width: auto !important;
     min-width: 200px !important;
     margin: 0 !important;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE SIDEBAR MENU FOOLPROOF Z-INDEX & SLIDE-IN FIX (USER REQUEST)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* 1. Header sits highest in page flow */
+  header.header_floating-wrap,
+  .header_floating-wrap,
+  .header_floating-wrap.scrolled {
+    z-index: 1000000 !important;
+    pointer-events: auto !important;
+  }
+
+  /* 2. Backdrop sits below the menu but above the page */
+  .mobile-nav-backdrop {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(10, 28, 44, 0.6) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 1000005 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.25s ease !important;
+  }
+
+  .mobile-nav-backdrop.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 1000005 !important;
+  }
+
+  /* 3. Mobile Navigation Menu sits ABOVE the backdrop */
+  .floating-nav-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 85vw !important;
+    max-width: 360px !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: #FFFFFF !important;
+    box-shadow: -6px 0 35px rgba(0, 0, 0, 0.3) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px 22px 30px 22px !important;
+    box-sizing: border-box !important;
+    transform: translateX(105%) !important;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 1000010 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .floating-nav-menu.active {
+    transform: translateX(0) !important;
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Header inside mobile drawer */
+  .mobile-sidebar-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-bottom: 14px !important;
+    margin-bottom: 14px !important;
+    border-bottom: 1px solid rgba(16, 43, 67, 0.1) !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .mobile-sidebar-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .mobile-sidebar-logo {
+    height: 36px !important;
+    width: auto !important;
+  }
+
+  .mobile-sidebar-name {
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 800 !important;
+    font-size: 1.15rem !important;
+    color: #102B43 !important;
+  }
+
+  .mobile-sidebar-close {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background: #F1F5F9 !important;
+    border: 1px solid #CBD5E1 !important;
+    color: #102B43 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+  }
+
+  /* Links inside mobile drawer */
+  .mobile-sidebar-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .floating-nav-menu .nav-item {
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    color: #102B43 !important;
+    padding: 12px 14px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease !important;
+  }
+
+  .floating-nav-menu .nav-item:hover,
+  .floating-nav-menu .nav-item.active {
+    background: rgba(196, 61, 70, 0.08) !important;
+    color: #C43D46 !important;
+  }
+
+  /* CTA at bottom of mobile drawer */
+  .mobile-sidebar-footer {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 18px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(16, 43, 67, 0.08) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .mobile-sidebar-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    background: #C43D46 !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-heading, 'Poppins', sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    padding: 14px 24px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(196, 61, 70, 0.3) !important;
   }
 }
