@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where to Eat &amp; Local Food | ZIONNICA — Authentic Dishes &amp; Dining</title>
+  <meta name="description" content="Discover traditional Nicaraguan dishes, street food culture, beachfront dining in San Juan del Sur and local restaurant favourites. Firsthand food notes by ZIONNICA.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+
+  <!-- Google Fonts: Poppins (Headings) & Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-eat">
+
+  <!-- Page Loader -->
+  <div class="site-loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         FLOATING STICKY HEADER
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="index.html#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <a href="index.html#hero" class="nav-item"><span>HOME</span></a>
+            <a href="explore.html" class="nav-item"><span>EXPLORE</span></a>
+            <a href="live.html" class="nav-item"><span>LIVE</span></a>
+            <a href="invest.html" class="nav-item"><span>INVEST</span></a>
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger active">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link active">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="index.html#connections" class="nav-item"><span>CONNECTIONS</span></a>
+            <a href="index.html#journal" class="nav-item"><span>JOURNAL</span></a>
+            <a href="explore.html#getting-there" class="nav-item"><span>RESOURCES</span></a>
+            <a href="index.html#story" class="nav-item"><span>ABOUT</span></a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================
+         HERO SECTION: WHERE TO EAT & LOCAL FOOD
+         (Typographic Hero with Coastal Photography Background)
+         ========================================== -->
+    <section class="hero-image-exact inner-hero" id="hero-eat" style="background-image: url('img/IMG-20260909-WA0005.jpg');">
+      <div class="hero-image-content-container">
+        <div class="hero-text-block">
+          
+          <div class="editorial_eyebrow-badge" style="margin-bottom: 16px;">
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF; font-weight: 700; letter-spacing: 0.14em;">FIRSTHAND CULINARY NOTES</span>
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Discover the Flavours <span class="hero-highlight-title">of Nicaragua.</span>
+          </h1>
+
+          <p class="hero-tagline-desc">
+            Traditional dishes, open-air fritangas, beachfront seafood and memorable dining spots discovered over a decade of visits.
+          </p>
+
+          <div class="hero-action-pair">
+            <a href="#how-i-eat" class="hero-btn-primary">
+              <span>Explore Restaurants</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="contact.html" class="hero-btn-story" style="text-decoration: none;">
+              <span class="story-play-circle"><i class="fa-solid fa-utensils"></i></span>
+              <span class="story-btn-text">Suggest a Place</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         QUICK-LINKS STRIP
+         ========================================== -->
+    <nav class="quick-links-strip" aria-label="Quick links to food sections">
+      <div class="quick-links-inner">
+        <span class="quick-links-label">Quick Jump:</span>
+        <div class="quick-links-pills">
+          <a href="#how-i-eat" class="quick-pill"><i class="fa-solid fa-fire-burner"></i> How I Eat</a>
+          <a href="#fav-dish" class="quick-pill"><i class="fa-solid fa-plate-wheat"></i> Local Dishes</a>
+          <a href="#city-gems" class="quick-pill"><i class="fa-solid fa-city"></i> Hidden Gems</a>
+          <a href="#fav-meals" class="quick-pill"><i class="fa-solid fa-star"></i> Favourite Meals</a>
+          <a href="#beach-dining" class="quick-pill"><i class="fa-solid fa-umbrella-beach"></i> Beach Restaurants</a>
+          <a href="#fav-drink" class="quick-pill"><i class="fa-solid fa-beer-mug-empty"></i> Cold Toña</a>
+          <a href="#photo-notes" class="quick-pill"><i class="fa-solid fa-camera"></i> Photo Wishlist</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 1: HOW I EAT HERE (Split Layout)
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="how-i-eat">
+      <div class="container-large padding-global">
+        <div class="split-editorial-wrap">
+          
+          <div class="split-editorial-media">
+            <div class="split-photo-frame">
+              <img src="img/IMG-20260909-WA0026.jpg" alt="Local Life and Street Food in Nicaragua" class="split-main-photo" loading="lazy">
+            </div>
+            <div class="split-floating-pill">
+              <i class="fa-solid fa-quote-left" style="color: #C43D46;"></i>
+              <span>"If it's running and open, it's good!"</span>
+            </div>
+          </div>
+
+          <div class="split-editorial-content">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">FOUNDER'S PERSPECTIVE</span>
+            </div>
+            <h2 class="editorial_title-large">How I Eat in Nicaragua</h2>
+            <p class="editorial_lead-paragraph" style="margin-left: 0; color: #4A6280;">
+              My philosophy on food in Nicaragua is simple, honest, and completely unpretentious:
+            </p>
+            <div style="background: var(--zn-warm-white, #F7F7F5); border-left: 4px solid var(--zn-crimson, #C43D46); padding: 20px 24px; border-radius: 0 16px 16px 0; margin-bottom: 24px;">
+              <p style="font-family: var(--font-heading, 'Poppins', sans-serif); font-size: 1.15rem; font-weight: 700; color: var(--zn-navy, #102B43); margin: 0 0 8px 0;">
+                "If it's running and open, it's good!"
+              </p>
+              <p style="font-size: 0.98rem; color: #747D83; margin: 0; line-height: 1.6;">
+                "Try, try, try the street food. It's good!"
+              </p>
+            </div>
+            <p style="font-size: 1rem; line-height: 1.7; color: #4A6280; margin: 0;">
+              Some of the most memorable meals in Nicaragua don't come with white tablecloths or TripAdvisor badges. They come from evening fritangas with charcoal smoke drifting into the warm breeze, grandmother recipes served on banana leaves, and fresh whole fried fish caught that very morning.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: FAVOURITE LOCAL DISH (Ocean Blue Band)
+         ========================================== -->
+    <section class="ocean-feature-band" id="fav-dish">
+      <div class="container-large padding-global">
+        <div style="max-width: 820px; margin: 0 auto;">
+          <div class="editorial_eyebrow-badge" style="justify-content: center; margin-bottom: 16px;">
+            <span class="editorial_eyebrow-dash" style="background: #FFFFFF;"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">FAVOURITE LOCAL DISH</span>
+            <span class="editorial_eyebrow-dash" style="background: #FFFFFF;"></span>
+          </div>
+          <h2 class="ocean-dish-title">Carne Asada con Gallo Pinto, or Pescado Frito</h2>
+          <p class="ocean-dish-desc">
+            Charcoal-grilled marinated beef served alongside freshly tossed gallo pinto, fried sweet plantains (maduros), salty fried cheese (queso frito) and crisp cabbage chimichurri. Or a whole red snapper, seasoned with garlic and lime, fried crispy and eaten beachfront with a cold drink.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: HIDDEN GEMS BY CITY (Three Rounded Cards)
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="city-gems">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">REGIONAL RECOMMENDATIONS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Hidden Gems by City</h2>
+          <p class="editorial_lead-paragraph">
+            Places I return to every visit for genuine hospitality and memorable flavours.
+          </p>
+        </div>
+
+        <div class="food-city-grid">
+
+          <!-- San Juan del Sur -->
+          <div class="food-city-card">
+            <span class="food-city-pill">SAN JUAN DEL SUR</span>
+            <h3>The Rustic</h3>
+            <div class="food-spot-name">Authentic Nica Food</div>
+            <p>
+              Down-to-earth, genuine local cooking that captures the soul of traditional home-style Nicaraguan dishes. A go-to for hearty portions and authentic flavour.
+            </p>
+          </div>
+
+          <!-- Granada -->
+          <div class="food-city-card">
+            <span class="food-city-pill">GRANADA</span>
+            <h3>El Zaguán</h3>
+            <div class="food-spot-name">Steaks &amp; Nica Dishes</div>
+            <p>
+              Set just behind the historic Cathedral, famous for charcoal-grilled steaks, traditional churrasco, colonial open-air courtyard charm and warm service.
+            </p>
+          </div>
+
+          <!-- Boaco -->
+          <div class="food-city-card">
+            <span class="food-city-pill">BOACO</span>
+            <h3>Pescado Frito</h3>
+            <div class="food-spot-name">Fresh Local Fish</div>
+            <p>
+              A classic roadside and mountain-pass staple: whole fresh fried fish with fried plantains, lime wedges and zesty pickled onions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: FAVOURITE MEALS (Zion Favorites Style)
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="fav-meals">
+      <div class="container-large padding-global">
+
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">TRIED &amp; TESTED</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Favourite Meals Across Towns</h2>
+          <p class="editorial_lead-paragraph">
+            Personal go-to spots where the quality and warmth never change.
+          </p>
+        </div>
+
+        <div class="fav-meals-grid">
+
+          <div class="fav-meal-card">
+            <div class="fav-meal-town">San Juan del Sur</div>
+            <div class="fav-meal-name">Maggie's</div>
+            <div class="fav-meal-dish">Favourite Restaurant</div>
+            <p style="font-size: 0.9rem; color: #747D83; margin-top: 10px; line-height: 1.5;">
+              My personal favourite restaurant in town. Consistently delicious, welcoming, and honest cooking.
+            </p>
+          </div>
+
+          <div class="fav-meal-card">
+            <div class="fav-meal-town">San Juan del Sur</div>
+            <div class="fav-meal-name">La Lancha</div>
+            <div class="fav-meal-dish">Fresh Seafood &amp; Ceviche</div>
+            <p style="font-size: 0.9rem; color: #747D83; margin-top: 10px; line-height: 1.5;">
+              Right along the water with unbeatable fresh fish dishes and easy coastal breeze.
+            </p>
+          </div>
+
+          <div class="fav-meal-card">
+            <div class="fav-meal-town">Granada</div>
+            <div class="fav-meal-name">El Zaguán</div>
+            <div class="fav-meal-dish">Steaks &amp; Courtyard Dining</div>
+            <p style="font-size: 0.9rem; color: #747D83; margin-top: 10px; line-height: 1.5;">
+              The benchmark for evening dinners and authentic churrasco in the colonial heart.
+            </p>
+          </div>
+
+          <div class="fav-meal-card">
+            <div class="fav-meal-town">Managua</div>
+            <div class="fav-meal-name">El Chante</div>
+            <div class="fav-meal-dish">Capital City Flavour</div>
+            <p style="font-size: 0.9rem; color: #747D83; margin-top: 10px; line-height: 1.5;">
+              Vibrant urban dining with authentic Nicaraguan flavours when passing through the capital.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: BEACH RESTAURANTS (Image-Led Navy Split)
+         ========================================== -->
+    <section class="section_editorial section-colorway-navy pv-large" id="beach-dining">
+      <div class="container-large padding-global">
+        <div class="split-editorial-wrap">
+
+          <div class="split-editorial-media">
+            <div class="split-photo-frame">
+              <img src="img/IMG-20260909-WA0005.jpg" alt="San Juan del Sur Bay Beachfront Dining" class="split-main-photo" loading="lazy">
+            </div>
+            <div class="split-floating-pill">
+              <i class="fa-solid fa-water" style="color: #176B86;"></i>
+              <span>San Juan del Sur Main Bay</span>
+            </div>
+          </div>
+
+          <div class="split-editorial-content">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash" style="background: #D9A441;"></span>
+              <span class="editorial_eyebrow-text" style="color: #D9A441;">COASTAL DINING</span>
+            </div>
+            <h2 class="editorial_title-large" style="color: #FFFFFF;">The Beach Restaurants</h2>
+            <p class="editorial_lead-paragraph" style="margin-left: 0; color: rgba(255, 255, 255, 0.88);">
+              The best beach restaurants are all right along the main San Juan del Sur bay.
+            </p>
+            <p style="font-size: 1rem; line-height: 1.7; color: rgba(255, 255, 255, 0.82); margin-bottom: 24px;">
+              You sit with your feet practically in the sand, watching fishing boats bob on the pacific swell as the golden sunset turns the cliffs violet. Fresh ceviche, grilled red snapper and cold drinks arrive without hurry.
+            </p>
+            <div style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 18px 22px;">
+              <strong style="color: #FFFFFF; font-size: 1.05rem; display: block; margin-bottom: 4px;">Sunset Tip:</strong>
+              <span style="color: rgba(255, 255, 255, 0.78); font-size: 0.94rem; line-height: 1.5; display: block;">
+                Arrive around 5:00 PM to grab a front-row wooden table before the sky changes colour.
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: FAVOURITE DRINK (Small Accent Card)
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="fav-drink">
+      <div class="container-large padding-global">
+        <div style="max-width: 680px; margin: 0 auto; text-align: center;">
+          
+          <div style="background: #FFFFFF; border: 1.5px solid rgba(16, 43, 67, 0.1); border-radius: 24px; padding: 44px 32px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);">
+            <div style="width: 58px; height: 58px; border-radius: 50%; background: rgba(196, 61, 70, 0.1); color: var(--zn-crimson, #C43D46); display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 18px;">
+              <i class="fa-solid fa-beer-mug-empty"></i>
+            </div>
+            <div class="editorial_eyebrow-badge" style="justify-content: center; margin-bottom: 10px;">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">FAVOURITE DRINK</span>
+              <span class="editorial_eyebrow-dash"></span>
+            </div>
+            <h3 style="font-family: var(--font-heading, 'Poppins', sans-serif); font-size: 2rem; font-weight: 800; color: var(--zn-navy, #102B43); margin-bottom: 12px;">
+              A Cold Toña
+            </h3>
+            <p style="font-size: 1.05rem; line-height: 1.65; color: #4A6280; margin: 0;">
+              Nicaragua's signature lager, served ice cold with a frosted bottle at the end of a long, sun-drenched day on the Pacific coast. Nothing beats it.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: FOOD PHOTOGRAPHY NOTE (Clean Labelled Placeholders)
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="photo-notes">
+      <div class="container-large padding-global">
+
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">EDITORIAL INTEGRITY</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Authentic Food Photography In Progress</h2>
+          <p class="editorial_lead-paragraph">
+            I don't use generic stock photography or artificial AI food renders. Real photography from each restaurant will be added during upcoming visits.
+          </p>
+        </div>
+
+        <div class="photo-notes-grid">
+          
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>Dishes &amp; Street Fritangas</h4>
+            <p>Carne asada with fresh gallo pinto, tajadas, queso frito and chimichurri.</p>
+          </div>
+
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>Maggie's Restaurant</h4>
+            <p>Exterior, signature plate, and dining room atmosphere in San Juan del Sur.</p>
+          </div>
+
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>El Zaguán Courtyard</h4>
+            <p>Colonial brick grills and evening courtyard steaks in Granada.</p>
+          </div>
+
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>La Lancha Beachfront</h4>
+            <p>Fresh ceviche and beachfront table views along the bay.</p>
+          </div>
+
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>Boaco Mountain Fish</h4>
+            <p>Traditional whole fried fish with lime and fried plantains.</p>
+          </div>
+
+          <div class="photo-needed-card">
+            <i class="fa-solid fa-camera-retro"></i>
+            <h4>El Chante Managua</h4>
+            <p>Urban capital city dining and local flavours.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CLOSING CTA (Photographic)
+         ========================================== -->
+    <section class="section_final-cta" id="contact" style="background-image: url('img/IMG-20260909-WA0010.jpg');">
+      <div class="final-cta_dark-overlay"></div>
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+          <div class="final-cta_box">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">SHARE A TIP</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+            <h2 class="final-cta_heading">Know a Place I Should Try?</h2>
+            <p class="final-cta_description">
+              Nicaragua's food culture is full of quiet discoveries. If you have a favourite roadside spot, family restaurant or beachfront cookout, let me know.
+            </p>
+            <div class="final-cta_buttons-wrap">
+              <a href="contact.html" class="cta_btn-primary">
+                <span>Suggest a Place</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </a>
+              <a href="explore.html" class="cta_btn-secondary">
+                <span>Explore Nicaragua</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SHARED SITE FOOTER
+         ========================================== -->
+    <footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#hero" class="footer_social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#hero" class="footer_social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="invest.html">Invest</a></li>
+                <li><a href="eat.html">Eat</a></li>
+                <li><a href="index.html#favorites">Favorites</a></li>
+                <li><a href="index.html#connections">Connections</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="explore.html#getting-there">Resources</a></li>
+                <li><a href="index.html#story">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="assets/dest-granada.png" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="contact.html">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="contact.html">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="contact.html">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

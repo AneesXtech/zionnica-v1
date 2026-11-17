@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Nicaragua | ZIONNICA — Destinations, Beaches &amp; Hidden Gems</title>
+  <meta name="description" content="Discover Nicaragua's 14 diverse regions, world-class surf beaches, volcanic adventures and hidden gems. A firsthand guide by ZIONNICA.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+
+  <!-- Google Fonts: Poppins (Headings) & Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-explore">
+
+  <!-- Page Loader -->
+  <div class="site-loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         FLOATING STICKY HEADER
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="index.html#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <a href="index.html#hero" class="nav-item"><span>HOME</span></a>
+            <a href="explore.html" class="nav-item active"><span>EXPLORE</span></a>
+            <a href="live.html" class="nav-item"><span>LIVE</span></a>
+            <a href="invest.html" class="nav-item"><span>INVEST</span></a>
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="index.html#connections" class="nav-item"><span>CONNECTIONS</span></a>
+            <a href="index.html#journal" class="nav-item"><span>JOURNAL</span></a>
+            <a href="#getting-there" class="nav-item"><span>RESOURCES</span></a>
+            <a href="index.html#story" class="nav-item"><span>ABOUT</span></a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================
+         HERO SECTION: EXPLORE NICARAGUA
+         ========================================== -->
+    <section class="hero-image-exact inner-hero" id="hero-explore" style="background-image: url('assets/hero_granada_sunset.jpg');">
+      <div class="hero-image-content-container">
+        <div class="hero-text-block">
+          
+          <div class="editorial_eyebrow-badge" style="margin-bottom: 16px;">
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF; font-weight: 700; letter-spacing: 0.14em;">FIRSTHAND REGIONAL GUIDE</span>
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+          </div>
+
+          <h1 class="hero-main-title">
+            There's More to Nicaragua <span class="hero-highlight-title">Than You Imagine.</span>
+          </h1>
+
+          <p class="hero-tagline-desc">
+            Your personal guide to destinations, Pacific beaches, volcanoes and mountain hidden gems — all explored firsthand across more than a decade of travel.
+          </p>
+
+          <div class="hero-action-pair">
+            <a href="#destinations" class="hero-btn-primary">
+              <span>Explore Destinations</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="index.html#contact" class="hero-btn-story" style="text-decoration: none;">
+              <span class="story-play-circle"><i class="fa-solid fa-calendar-check"></i></span>
+              <span class="story-btn-text">Plan Your Visit</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         QUICK-LINKS STRIP (Navy Background With Pill Chips)
+         ========================================== -->
+    <nav class="quick-links-strip" aria-label="Quick links to page sections">
+      <div class="quick-links-inner">
+        <span class="quick-links-label">Quick Jump:</span>
+        <div class="quick-links-pills">
+          <a href="#destinations" class="quick-pill"><i class="fa-solid fa-location-dot"></i> Destinations</a>
+          <a href="#beaches" class="quick-pill"><i class="fa-solid fa-water"></i> Beaches</a>
+          <a href="#nature" class="quick-pill"><i class="fa-solid fa-mountain"></i> Nature &amp; Volcanoes</a>
+          <a href="#hidden-gems" class="quick-pill"><i class="fa-solid fa-gem"></i> Hidden Gems</a>
+          <a href="#travel-styles" class="quick-pill"><i class="fa-solid fa-compass"></i> Travel Styles</a>
+          <a href="#things-to-do" class="quick-pill"><i class="fa-solid fa-person-hiking"></i> Things to Do</a>
+          <a href="#return-skip" class="quick-pill"><i class="fa-solid fa-repeat"></i> Return &amp; Skip</a>
+          <a href="#getting-there" class="quick-pill"><i class="fa-solid fa-plane"></i> Getting There</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 1: DESTINATIONS & REGIONS (14 REGIONS)
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="destinations">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">ALL 14 REGIONS &amp; TOWNS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">A Country of Surprising Diversity</h2>
+          <p class="editorial_lead-paragraph">
+            From historic colonial plazas to lush cloud forests, surf bays and Caribbean islands — here is my firsthand take on every region.
+          </p>
+        </div>
+
+        <div class="destinations-fourteen-grid">
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0010.jpg" alt="Granada Colonial City" loading="lazy">
+              <span class="dest-region-pill">COLONIAL CHARM</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Granada</h3>
+              <p>Moorish courtyards, pastel facades, horse-drawn carriages and gateway to the 365 Isletas of Lake Nicaragua.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0002.jpg" alt="León Cathedral and Plazas" loading="lazy">
+              <span class="dest-region-pill">CULTURE &amp; HISTORY</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>León</h3>
+              <p>The intellectual heart of the country with the grand white rooftop cathedral, vibrant murals and volcano boarding.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0015.jpg" alt="Ometepe Twin Volcanoes" loading="lazy">
+              <span class="dest-region-pill">VOLCANIC WONDER</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Ometepe</h3>
+              <p>An enchanting hour-glass island rising from Lake Nicaragua with twin volcanoes Concepción and Maderas, cloud forests and sacred petroglyphs.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0045.jpg" alt="Corn Island Turquoise Waters" loading="lazy">
+              <span class="dest-region-pill">CARIBBEAN GEM</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Corn Island</h3>
+              <p>Big Corn and Little Corn offer tranquil Afro-Caribbean pace, coral reef diving, fresh spiny lobster and car-free island living.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0050.jpg" alt="Bluefields Coastal Culture" loading="lazy">
+              <span class="dest-region-pill">AUTONOMOUS COAST</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Bluefields</h3>
+              <p>Rich Creole and indigenous heritage, colourful reggae rhythms, vibrant seafood markets and coastal river access.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0005.jpg" alt="San Juan del Sur Bay" loading="lazy">
+              <span class="dest-region-pill">PACIFIC SURF &amp; SUNSET</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>San Juan del Sur</h3>
+              <p>A lively horseshoe bay brimming with sunset beachfront eateries, surf shuttles to world-class breaks and welcoming expat energy.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0023.jpg" alt="Popoyo Emerald Coast" loading="lazy">
+              <span class="dest-region-pill">EMERALD COAST</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Popoyo</h3>
+              <p>Raw, unspoiled coastlines with 300+ days of offshore winds, legendary A-frame waves and a close-knit Canadian &amp; surf community.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0035.jpg" alt="Chinandega Volcanoes" loading="lazy">
+              <span class="dest-region-pill">VOLCANIC HIGHLANDS</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Chinandega</h3>
+              <p>Home to San Cristóbal, Nicaragua’s highest active volcano, sugar cane plantations and serene Pacific estuaries.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0003.jpg" alt="Boaco City of Two Floors" loading="lazy">
+              <span class="dest-region-pill">TWO-STOREY CITY</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Boaco</h3>
+              <p>The mountain "City of Two Floors", famous for its celebrated July patron festivities, artisan leathercraft and authentic rural warmth.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0001.jpg" alt="Matagalpa Cloud Forest" loading="lazy">
+              <span class="dest-region-pill">COFFEE COUNTRY</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Matagalpa</h3>
+              <p>Cool alpine mountain air, shade-grown organic coffee estates, cascading waterfalls and refreshing pine-scented trails.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0002.jpg" alt="Estelí Artisans" loading="lazy">
+              <span class="dest-region-pill">ARTISAN NORTH</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Estelí</h3>
+              <p>World-renowned hand-rolled cigars, expressive revolutionary murals, cool plateau breezes and dramatic Miraflor nature reserve.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0004.jpg" alt="Masaya Crafts and Volcano" loading="lazy">
+              <span class="dest-region-pill">FOLKLORE CAPITAL</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Masaya</h3>
+              <p>The artisanal soul of Nicaragua: vibrant woven hammock markets, traditional marimba music and an active glow in Masaya Volcano's crater.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0006.jpg" alt="Managua Capital" loading="lazy">
+              <span class="dest-region-pill">TRANSIT &amp; CAPITAL</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Managua</h3>
+              <p>The bustling international transit gateway; useful for logistics, embassy services and flights, though most travellers swiftly head to the coast or colonies.</p>
+            </div>
+          </article>
+
+          <article class="dest-arched-card">
+            <div class="dest-card-media">
+              <img src="img/IMG-20260909-WA0007.jpg" alt="Chontales Ranchlands" loading="lazy">
+              <span class="dest-region-pill">RUGGED RANCHLANDS</span>
+            </div>
+            <div class="dest-card-body">
+              <h3>Chontales</h3>
+              <p>Rolling volcanic foothills, proud cattle ranches, ancient pre-Columbian stone monoliths and quiet, welcoming traditional towns.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: BEACHES & COASTAL TOWNS
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="beaches">
+      <div class="container-large padding-global">
+        <div class="split-editorial-wrap">
+          <div class="split-editorial-media">
+            <div class="split-photo-frame">
+              <img src="img/IMG-20260909-WA0005.jpg" alt="Nicaragua Pacific Beaches" class="split-main-photo" loading="lazy">
+            </div>
+            <div class="split-floating-pill">
+              <i class="fa-solid fa-sun" style="color: #C43D46;"></i>
+              <span>300+ Days of Offshore Winds</span>
+            </div>
+          </div>
+          <div class="split-editorial-content">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">PACIFIC COASTLINE</span>
+            </div>
+            <h2 class="editorial_title-large">Beaches &amp; Coastal Towns</h2>
+            <p class="editorial_lead-paragraph" style="margin-left: 0;">
+              Nicaragua's Pacific coast is blessed with dramatic rocky headlands, wide sandy bays and year-round offshore breezes created by Lake Nicaragua.
+            </p>
+            
+            <div class="beach-focus-list">
+              <div class="beach-focus-item">
+                <strong>Popoyo:</strong> Legendary reef breaks, quiet beachfront hostels, and an easygoing surf culture on the Emerald Coast.
+              </div>
+              <div class="beach-focus-item">
+                <strong>San Juan del Sur:</strong> A colourful bay town with dozens of secluded beaches reachable by short shuttle rides north and south.
+              </div>
+              <div class="beach-focus-item">
+                <strong>León (Las Peñitas &amp; Poneloya):</strong> Long Pacific beach strips where university energy meets authentic fishing communities.
+              </div>
+              <div class="beach-focus-item">
+                <strong>Chinandega (Jiquilillo):</strong> Quiet, unspoiled black-sand beaches, sea turtle nesting grounds and estuary mangroves.
+              </div>
+            </div>
+
+            <div class="favourite-beaches-box">
+              <h4><i class="fa-solid fa-star" style="color: #C43D46; margin-right: 8px;"></i> My Personal Beach Picks</h4>
+              <p><strong>Playa Remanso:</strong> Gentle waves and my personal top pick for relaxed afternoon swims and fish tacos.</p>
+              <p><strong>Playa Yankee:</strong> Powerful left-hand barrel and unspoiled wild cliffs.</p>
+              <p><strong>Playa Maderas:</strong> The iconic social surf hub with stunning sea stacks.</p>
+              <p><strong>Playa Majagual:</strong> The golden standard for quiet, unforgettable Pacific sunsets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: MOUNTAINS, LAKES, VOLCANOES & NATURE (Navy Section)
+         ========================================== -->
+    <section class="section_editorial section-colorway-navy pv-large" id="nature">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center text-white">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">LAND OF LAKES &amp; VOLCANOES</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large" style="color: #FFFFFF !important;">Raw Nature, Pristine Waters</h2>
+          <p class="editorial_lead-paragraph" style="color: rgba(255,255,255,0.92) !important;">
+            Nineteen active and dormant volcanoes line the Pacific ridge, feeding crater lakes and fertile cloud forests.
+          </p>
+        </div>
+
+        <div class="navy-outlined-cards-grid">
+          
+          <div class="navy-outline-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-fire-burner"></i></div>
+            <h3>Masaya Volcano</h3>
+            <p>One of the world's few volcanoes where you can drive right to the crater rim and peer into the active churning lava lake glowing under the evening sky.</p>
+          </div>
+
+          <div class="navy-outline-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-person-snowboarding"></i></div>
+            <h3>Cerro Negro</h3>
+            <p>A young, active black-ash volcano near León where you hike to the Martian-like peak and board down the 45-degree cinder slope at thrilling speeds.</p>
+          </div>
+
+          <div class="navy-outline-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <h3>Mombacho Cloud Forest</h3>
+            <p>A misty tropical canopy overlooking Lake Nicaragua, home to endemic orchids, howler monkeys, ancient lava tunnels and cool alpine hiking trails.</p>
+          </div>
+
+          <div class="navy-outline-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-water"></i></div>
+            <h3>Lake Nicaragua (Cocibolca)</h3>
+            <p>Central America's largest freshwater lake, harbouring freshwater bull sharks, the 365 Isletas archipelago and the majestic peaks of Ometepe.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: HIDDEN GEMS (Staggered Image Cards)
+         ========================================== -->
+    <section class="section_editorial section-colorway-warm pv-large" id="hidden-gems">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">BEYOND THE TOURIST TRAIL</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Nicaragua's Hidden Gems</h2>
+          <p class="editorial_lead-paragraph">
+            The places most travellers pass by without realising what they missed — quiet cattle towns, canyon river floats and cool coffee highlands.
+          </p>
+        </div>
+
+        <div class="hidden-gems-staggered-grid">
+
+          <article class="gem-card">
+            <div class="gem-media"><img src="img/IMG-20260909-WA0035.jpg" alt="Chinandega Estuaries" loading="lazy"></div>
+            <div class="gem-info">
+              <span class="gem-tag">NORTH PACIFIC</span>
+              <h3>Chinandega &amp; Cosigüina</h3>
+              <p>Hike to the crater rim of Volcán Cosigüina for breathtaking views across three nations: Nicaragua, Honduras, and El Salvador overlooking the Gulf of Fonseca.</p>
+            </div>
+          </article>
+
+          <article class="gem-card">
+            <div class="gem-media"><img src="img/IMG-20260909-WA0003.jpg" alt="Boaco Hills" loading="lazy"></div>
+            <div class="gem-info">
+              <span class="gem-tag">CENTRAL HIGHLANDS</span>
+              <h3>Boaco</h3>
+              <p>Tiered hillsides and vibrant festivals. Try the traditional fried fish at Pescado Fri and experience honest, mountain town hospitality.</p>
+            </div>
+          </article>
+
+          <article class="gem-card">
+            <div class="gem-media"><img src="img/IMG-20260909-WA0001.jpg" alt="Matagalpa Highland Farms" loading="lazy"></div>
+            <div class="gem-info">
+              <span class="gem-tag">COFFEE BELT</span>
+              <h3>Matagalpa Highlands</h3>
+              <p>Escape the Pacific heat into the high canopy. Stay at a family-run coffee finca, drink freshly roasted beans, and hike through Selva Negra cloud forests.</p>
+            </div>
+          </article>
+
+          <article class="gem-card">
+            <div class="gem-media"><img src="img/IMG-20260909-WA0003.jpg" alt="Camoapa Traditional Artisans" loading="lazy"></div>
+            <div class="gem-info">
+              <span class="gem-tag">ARTISAN TRADITION</span>
+              <h3>Camoapa</h3>
+              <p>Famed throughout Central America for exquisite hand-woven Pita hats and dairy traditions, Camoapa offers a glimpse into timeless rural Nicaraguan life.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: CHOOSE BY TRAVEL STYLE
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="travel-styles">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">TAILORED RECOMMENDATIONS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Choose by Travel Style</h2>
+          <p class="editorial_lead-paragraph">
+            Every traveller has different rhythms and preferences. Here are my firsthand pairings based on your travelling company.
+          </p>
+        </div>
+
+        <div class="travel-styles-grid">
+
+          <div class="style-card">
+            <div class="style-badge"><i class="fa-solid fa-people-roof"></i> For Families</div>
+            <h3>Matagalpa · León · Granada · SJDS · Masaya</h3>
+            <p>Gentle boat rides in the Isletas, safe calm-water beaches like Remanso, artisan markets in Masaya, and comfortable family-friendly boutique hotels.</p>
+          </div>
+
+          <div class="style-card">
+            <div class="style-badge"><i class="fa-solid fa-heart"></i> For Couples</div>
+            <h3>"There Isn't a Place That Isn't for Couples"</h3>
+            <p>From sunset dinners at El Zaguán in Granada to private oceanfront eco-lodges in Popoyo and stargazing on Ometepe — romance is effortless throughout.</p>
+          </div>
+
+          <div class="style-card">
+            <div class="style-badge"><i class="fa-solid fa-person-hiking"></i> For Adventure Seekers</div>
+            <h3>San Juan del Sur · Masaya · Ometepe</h3>
+            <p>Volcano boarding at Cerro Negro, surfing powerful breaks at Playa Yankee, hiking through dense cloud forest up Volcán Maderas, and deep-sea sport fishing.</p>
+          </div>
+
+          <div class="style-card">
+            <div class="style-badge"><i class="fa-solid fa-spa"></i> For Deep Relaxation</div>
+            <h3>Popoyo · Matagalpa · Ometepe</h3>
+            <p>Slow ocean breezes, beachfront yoga pavilions, listening to morning howler monkeys in the highlands, and disconnecting from the Western 24/7 grind.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: THINGS TO DO (Icon-Free Pill List)
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="things-to-do">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">ACTIVE DISCOVERIES</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Things to Do in Nicaragua</h2>
+          <p class="editorial_lead-paragraph">
+            Whether your idea of an unforgettable day is surfing sunrise barrels or sampling street-stall nacatamales in a centuries-old plaza.
+          </p>
+        </div>
+
+        <div class="things-pill-cloud">
+          <span class="pill-activity">World-Class Surfing (Emerald Coast &amp; SJDS)</span>
+          <span class="pill-activity">Volcano Boarding down Cerro Negro</span>
+          <span class="pill-activity">Cloud Forest Hiking in Ometepe &amp; Mombacho</span>
+          <span class="pill-activity">Pacific Deep-Sea Sport Fishing</span>
+          <span class="pill-activity">Caribbean Scuba Diving &amp; Snorkelling</span>
+          <span class="pill-activity">Wildlife Spotting (Sloths, Monkeys &amp; Sea Turtles)</span>
+          <span class="pill-activity">Colonial Architecture &amp; Cathedral Walking</span>
+          <span class="pill-activity">Artisan Weaving &amp; Pottery in Masaya</span>
+          <span class="pill-activity">Shade-Grown Coffee Finca Tours</span>
+          <span class="pill-activity">Oceanfront Yoga &amp; Wellness Retreats</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: PLACES TO RETURN TO & ONE TO SKIP
+         ========================================== -->
+    <section class="section_editorial section-colorway-navy pv-large" id="return-skip">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center text-white">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">AN HONEST PERSPECTIVE</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large" style="color: #FFFFFF !important;">Places I Return To — And One I Skip</h2>
+          <p class="editorial_lead-paragraph" style="color: rgba(255,255,255,0.92) !important;">
+            True credibility requires honesty. Not every city fits every traveller's rhythm.
+          </p>
+        </div>
+
+        <div class="return-skip-grid">
+          
+          <div class="return-column">
+            <div class="return-skip-header">
+              <i class="fa-solid fa-circle-check" style="color: #2ECC71;"></i>
+              <h3>Places That Keep Calling Me Back</h3>
+            </div>
+            <ul class="return-list">
+              <li>
+                <strong>Chontales:</strong> Wide open landscapes, honest ranching culture and authentic warmth untouched by commercial tourism.
+              </li>
+              <li>
+                <strong>Popoyo:</strong> The simplicity of the tide, consistent offshore winds, and a genuine international surf community.
+              </li>
+              <li>
+                <strong>San Juan del Sur:</strong> Returning to familiar beach restaurants, stunning sunsets at Remanso, and the comforting pulse of the bay.
+              </li>
+              <li>
+                <strong>Granada:</strong> Morning espresso in a quiet colonial courtyard, historic architecture, and the easy pace of lakeside life.
+              </li>
+            </ul>
+          </div>
+
+          <div class="skip-column">
+            <div class="return-skip-header">
+              <i class="fa-solid fa-circle-xmark" style="color: #C43D46;"></i>
+              <h3>The Place I Skip: Managua</h3>
+            </div>
+            <div class="skip-content">
+              <p>
+                Probably the most controversial thing to say as it is the capital, but honesty is why ZIONNICA exists. I live just outside of Miami and don't go there; I'm not opposed to dense cities—I love Brooklyn, Cartegena, Paris, and San Francisco.
+              </p>
+              <p>
+                Managua simply isn't my vibe. I find a lack of preserved street culture, higher expenses without corresponding value, and it isn't very scenic.
+              </p>
+              <p>
+                <strong>My Travel Hack:</strong> When I fly into Augusto C. Sandino Airport (MGA), I pick up my rental car or hail an inDrive, and within 30 minutes I'm in Masaya or Granada where I can breathe fresh air, relax, and let my guard down.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: HOW TO GET THERE & WHEN TO GO
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="getting-there">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">PRACTICAL LOGISTICS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">How to Get There &amp; Best Time to Go</h2>
+          <p class="editorial_lead-paragraph">
+            Navigating transport with confidence and understanding regional celebration calendars.
+          </p>
+        </div>
+
+        <div class="logistics-two-cards">
+          
+          <div class="logistics-card">
+            <div class="logistics-icon"><i class="fa-solid fa-route"></i></div>
+            <h3>Transportation &amp; Getting Around</h3>
+            <ul>
+              <li><strong>inDrive:</strong> The single best transportation hack in Nicaragua. Works like Uber with upfront agreed pricing, avoiding arbitrary tourist taxi premiums.</li>
+              <li><strong>Car Rentals:</strong> Renting an SUV at the airport is straightforward and ideal if you plan to explore remote beaches along the Emerald Coast.</li>
+              <li><strong>Private Shuttles &amp; Tours:</strong> Excellent for comfortable inter-city transfers between Managua, Granada, León and San Juan del Sur.</li>
+            </ul>
+          </div>
+
+          <div class="logistics-card">
+            <div class="logistics-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Best Time to Visit</h3>
+            <ul>
+              <li><strong>Anytime is a Good Time:</strong> Nicaragua is a year-round destination with warm tropical weather and distinct regional charms throughout all 12 months.</li>
+              <li><strong>Festivals Across Regions:</strong> Every region hosts lively patron festivals. Don't miss Boaco’s magnificent July festival with traditional equestrian parades and street music.</li>
+              <li><strong>Green Season (May – Oct):</strong> Lush emerald landscapes, cheaper lodging and world-class uncrowded surf.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CLOSING CTA (Photographic)
+         ========================================== -->
+    <section class="section_final-cta" id="contact" style="background-image: url('assets/hero-bg.png');">
+      <div class="final-cta_dark-overlay"></div>
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+          <div class="final-cta_box">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">YOUR JOURNEY AWAITS</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+            <h2 class="final-cta_heading">Every Place Has Its Own Story.</h2>
+            <p class="final-cta_description">
+              Whether you are planning a two-week escape or considering calling this coastline home, let's start with real, honest advice.
+            </p>
+            <div class="final-cta_buttons-wrap">
+              <a href="index.html#contact" class="cta_btn-primary">
+                <span>Get in Touch</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="live.html" class="cta_btn-secondary">
+                <span>Explore Living in Nicaragua</span>
+                <i class="fa-solid fa-house-chimney"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners
+                in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#" class="footer_social-circle" aria-label="Facebook"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer_social-circle" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#live">Live</a></li>
+                <li><a href="#invest">Invest</a></li>
+                <li><a href="#eat">Eat</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#connections">Connections</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#story">About</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="assets/dest-granada.png" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="#contact">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Consultation Modal Dialog -->
+  <div class="consultation-modal" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">START A CONVERSATION</span>
+        <h3 id="modal-title">Connect With ZIONNICA</h3>
+        <p>Whether you have travel questions, want restaurant suggestions, or need referrals to trusted attorneys and realtors.</p>
+      </div>
+      <form class="consultation-form" id="consultation-form">
+        <div class="form-group">
+          <label for="form-name">Your Name</label>
+          <input type="text" id="form-name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="form-email">Your Email Address</label>
+          <input type="email" id="form-email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="form-topic">What Can I Help You With?</label>
+          <select id="form-topic" required>
+            <option value="" disabled selected>Select an inquiry type</option>
+            <option value="travel">First-time trip planning or itinerary recommendations</option>
+            <option value="lifestyle">Living in Nicaragua, expat communities and daily rhythm</option>
+            <option value="property">Property considerations, attorneys and due diligence</option>
+            <option value="share">Sharing a favourite restaurant or travel story</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-message">Your Message</label>
+          <textarea id="form-message" rows="4" placeholder="Tell me a little about what you are looking for..." required></textarea>
+        </div>
+        <button type="submit" class="cta_btn-primary modal-submit-btn">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

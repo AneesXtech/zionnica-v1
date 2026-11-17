@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Connect | ZIONNICA — Start a Conversation</title>
+  <meta name="description" content="Have a question, a recommendation to share or an idea for your next Nicaragua adventure? Get in touch directly with the ZIONNICA founder.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+
+  <!-- Google Fonts: Poppins (Headings) & Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contact">
+
+  <!-- Page Loader -->
+  <div class="site-loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         FLOATING STICKY HEADER
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="index.html#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <a href="index.html#hero" class="nav-item"><span>HOME</span></a>
+            <a href="explore.html" class="nav-item"><span>EXPLORE</span></a>
+            <a href="live.html" class="nav-item"><span>LIVE</span></a>
+            <a href="invest.html" class="nav-item"><span>INVEST</span></a>
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="index.html#connections" class="nav-item"><span>CONNECTIONS</span></a>
+            <a href="index.html#journal" class="nav-item"><span>JOURNAL</span></a>
+            <a href="explore.html#getting-there" class="nav-item"><span>RESOURCES</span></a>
+            <a href="index.html#story" class="nav-item"><span>ABOUT</span></a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn active" style="background-color: var(--zn-crimson-hover, #B3323B);">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================
+         HERO SECTION: LET'S CONNECT
+         ========================================== -->
+    <section class="hero-image-exact inner-hero" id="hero-contact" style="background-image: url('img/IMG-20260909-WA0004.jpg');">
+      <div class="hero-image-content-container">
+        <div class="hero-text-block">
+          
+          <div class="editorial_eyebrow-badge" style="margin-bottom: 16px;">
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF; font-weight: 700; letter-spacing: 0.14em;">DIRECT CONVERSATION</span>
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Your Nicaragua Story <span class="hero-highlight-title">Starts Here.</span>
+          </h1>
+
+          <p class="hero-tagline-desc">
+            Have a question, a recommendation to share or an idea for your next Nicaragua adventure? Let's start a conversation.
+          </p>
+
+          <div class="hero-action-pair">
+            <a href="#contact-form" class="hero-btn-primary">
+              <span>Send a Message</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="mailto:zionnicaragua@gmail.com" class="hero-btn-story" style="text-decoration: none;">
+              <span class="story-play-circle"><i class="fa-solid fa-envelope"></i></span>
+              <span class="story-btn-text">Email Me</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
+         SIMPLE CONTACT SECTION
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="contact-form">
+      <div class="container-large padding-global">
+        <div style="max-width: 640px; margin: 0 auto; background: #FFFFFF; border-radius: 20px; padding: 40px 28px; box-shadow: 0 10px 30px rgba(16, 43, 67, 0.08); border: 1px solid rgba(16, 43, 67, 0.06);">
+          
+          <div class="editorial_header-wrap text-center" style="margin-bottom: 28px;">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">DIRECT MESSAGE</span>
+              <span class="editorial_eyebrow-dash"></span>
+            </div>
+            <h2 class="editorial_title-large" style="font-size: clamp(1.8rem, 4vw, 2.3rem); margin-bottom: 8px;">
+              Send a Message
+            </h2>
+            <p class="editorial_lead-paragraph" style="font-size: 0.95rem; margin: 0 auto;">
+              Fill in your details below and I will get back to you personally.
+            </p>
+          </div>
+
+          <form action="https://formsubmit.co/zionnicaragua@gmail.com" method="POST" id="main-contact-form" class="consultation-form" style="display: flex; flex-direction: column; gap: 18px;">
+            <!-- Honeypot anti-spam field -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Inquiry from ZIONNICA Website">
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="contact-name" style="display: block; font-weight: 700; font-size: 0.9rem; color: #102B43; margin-bottom: 6px;">Your Name *</label>
+              <input type="text" id="contact-name" name="name" placeholder="John Doe" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1.5px solid #D2D6DC; font-size: 0.95rem; box-sizing: border-box;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="contact-email" style="display: block; font-weight: 700; font-size: 0.9rem; color: #102B43; margin-bottom: 6px;">Your Email *</label>
+              <input type="email" id="contact-email" name="email" placeholder="name@example.com" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1.5px solid #D2D6DC; font-size: 0.95rem; box-sizing: border-box;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="contact-topic-select" style="display: block; font-weight: 700; font-size: 0.9rem; color: #102B43; margin-bottom: 6px;">What would you like to discuss? *</label>
+              <select id="contact-topic-select" name="topic" required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1.5px solid #D2D6DC; font-size: 0.95rem; box-sizing: border-box; background: #FFFFFF;">
+                <option value="general">General Question</option>
+                <option value="plan-trip">Trip Planning &amp; Itinerary</option>
+                <option value="living">Living &amp; Community Realities</option>
+                <option value="property">Investment &amp; Real Estate Considerations</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="contact-message" style="display: block; font-weight: 700; font-size: 0.9rem; color: #102B43; margin-bottom: 6px;">Your Message *</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell me what you're looking for, planning or exploring..." required style="width: 100%; padding: 13px 16px; border-radius: 10px; border: 1.5px solid #D2D6DC; font-size: 0.95rem; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+
+            <div style="text-align: center; margin-top: 8px;">
+              <button type="submit" class="cta_btn-primary" style="padding: 14px 34px; font-size: 0.98rem; margin: 0 auto;">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+
+            <p style="font-size: 0.8rem; color: #747D83; text-align: center; margin: 6px 0 0 0;">
+              Your email is kept strictly private. Replies sent directly by the founder.
+            </p>
+          </form>
+
+          <!-- Direct Email Box -->
+          <div style="margin-top: 28px; padding-top: 22px; border-top: 1px solid rgba(16, 43, 67, 0.08); text-align: center;">
+            <p style="font-size: 0.88rem; color: #627D98; margin: 0 0 6px 0;">Prefer direct email?</p>
+            <a href="mailto:zionnicaragua@gmail.com" style="font-family: var(--font-heading, 'Poppins', sans-serif); font-size: 1.05rem; font-weight: 700; color: var(--zn-crimson, #C43D46); text-decoration: none;">
+              zionnicaragua@gmail.com
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         CLOSING CTA (Photographic)
+         ========================================== -->
+    <section class="section_final-cta" id="contact" style="background-image: url('img/IMG-20260909-WA0005.jpg');">
+      <div class="final-cta_dark-overlay"></div>
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+          <div class="final-cta_box">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">UNTIL NEXT TIME</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+            <h2 class="final-cta_heading">Maybe One Day I'll See You Somewhere in Nicaragua.</h2>
+            <p class="final-cta_description">
+              Until then, explore the destinations, check the lifestyle realities, and start dreaming up your next journey.
+            </p>
+            <div class="final-cta_buttons-wrap">
+              <a href="explore.html" class="cta_btn-primary">
+                <span>Explore Nicaragua</span>
+                <i class="fa-solid fa-compass"></i>
+              </a>
+              <a href="index.html#hero" class="cta_btn-secondary">
+                <span>Back to Home</span>
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SHARED SITE FOOTER
+         ========================================== -->
+    <footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#hero" class="footer_social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#hero" class="footer_social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="invest.html">Invest</a></li>
+                <li><a href="eat.html">Eat</a></li>
+                <li><a href="index.html#favorites">Favorites</a></li>
+                <li><a href="index.html#connections">Connections</a></li>
+                <li><a href="index.html#journal">Journal</a></li>
+                <li><a href="explore.html#getting-there">Resources</a></li>
+                <li><a href="index.html#story">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="assets/dest-granada.png" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="contact.html">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="contact.html">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="contact.html">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+  </div>
+
+  <!-- Contact Form Helper Script -->
+  <script>
+    function selectContactTopic(topicKey) {
+      document.querySelectorAll('.contact-way-card').forEach(c => c.classList.remove('is-selected'));
+      const card = document.querySelector(`[data-topic="${topicKey}"]`);
+      if (card) card.classList.add('is-selected');
+
+      const select = document.getElementById('contact-topic-select');
+      if (select) {
+        select.value = topicKey;
+      }
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

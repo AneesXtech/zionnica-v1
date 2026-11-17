@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live in Nicaragua | ZIONNICA — Expat Communities, Culture &amp; Practical Realities</title>
+  <meta name="description" content="What everyday life in Nicaragua is really like: expat communities in Granada, SJDS and Popoyo, cultural insights, living costs, and practical travel hacks.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+
+  <!-- Google Fonts: Poppins (Headings) & Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-live">
+
+  <!-- Page Loader -->
+  <div class="site-loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         FLOATING STICKY HEADER
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="index.html#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <a href="index.html#hero" class="nav-item"><span>HOME</span></a>
+            <a href="explore.html" class="nav-item"><span>EXPLORE</span></a>
+            <a href="live.html" class="nav-item active"><span>LIVE</span></a>
+            <a href="invest.html" class="nav-item"><span>INVEST</span></a>
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="index.html#connections" class="nav-item"><span>CONNECTIONS</span></a>
+            <a href="index.html#journal" class="nav-item"><span>JOURNAL</span></a>
+            <a href="explore.html#getting-there" class="nav-item"><span>RESOURCES</span></a>
+            <a href="index.html#story" class="nav-item"><span>ABOUT</span></a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================
+         HERO SECTION: LIVE IN NICARAGUA
+         ========================================== -->
+    <section class="hero-image-exact inner-hero" id="hero-live" style="background-image: url('img/IMG-20260909-WA0005.jpg');">
+      <div class="hero-image-content-container">
+        <div class="hero-text-block">
+
+          <div class="editorial_eyebrow-badge" style="margin-bottom: 16px;">
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF; font-weight: 700; letter-spacing: 0.14em;">FIRSTHAND LIVING &amp; EXPAT GUIDE</span>
+            <span class="editorial_eyebrow-dash" style="background-color: var(--zn-crimson);"></span>
+          </div>
+
+          <h1 class="hero-main-title">
+            Imagine a Different <span class="hero-highlight-title">Way of Living.</span>
+          </h1>
+
+          <p class="hero-tagline-desc">
+            Everyday life, local culture, expat communities, conversational Spanish and practical realities — shared honestly by someone who lives between Florida and Nicaragua.
+          </p>
+
+          <div class="hero-action-pair">
+            <a href="#daily-pace" class="hero-btn-primary">
+              <span>Explore Living Guide</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="index.html#contact" class="hero-btn-story" style="text-decoration: none;">
+              <span class="story-play-circle"><i class="fa-solid fa-envelope"></i></span>
+              <span class="story-btn-text">Ask a Question</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         QUICK-LINKS STRIP (Navy Background With Pill Chips)
+         ========================================== -->
+    <nav class="quick-links-strip" aria-label="Quick links to page sections">
+      <div class="quick-links-inner">
+        <span class="quick-links-label">Quick Jump:</span>
+        <div class="quick-links-pills">
+          <a href="#daily-pace" class="quick-pill"><i class="fa-solid fa-clock"></i> Daily Pace</a>
+          <a href="#communities" class="quick-pill"><i class="fa-solid fa-users"></i> Communities</a>
+          <a href="#culture" class="quick-pill"><i class="fa-solid fa-hand-holding-heart"></i> Language &amp; Culture</a>
+          <a href="#practical-hacks" class="quick-pill"><i class="fa-solid fa-lightbulb"></i> Practical Hacks</a>
+          <a href="#cost-of-living" class="quick-pill"><i class="fa-solid fa-coins"></i> Cost of Living</a>
+          <a href="#sandbird" class="quick-pill"><i class="fa-solid fa-feather"></i> Sandbird Lifestyle</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 1: A DIFFERENT PACE OF LIFE
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="daily-pace">
+      <div class="container-large padding-global">
+        <div class="split-editorial-wrap">
+          
+          <div class="split-editorial-media">
+            <div class="split-photo-frame">
+              <img src="img/IMG-20260909-WA0026.jpg" alt="Pacing everyday life in Nicaragua" class="split-main-photo" loading="lazy">
+            </div>
+            <div class="split-floating-pill">
+              <i class="fa-solid fa-mug-hot" style="color: #C43D46;"></i>
+              <span>Slowing Down to Human Scale</span>
+            </div>
+          </div>
+
+          <div class="split-editorial-content">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">DAILY REALITIES</span>
+            </div>
+            <h2 class="editorial_title-large">A Different Pace of Life</h2>
+            <p class="editorial_lead-paragraph" style="margin-left: 0;">
+              One of my key observations from travelling to 60+ countries is that many Western societies operate with a relentless sense of urgency. Everything is about productivity, schedules, and grinding.
+            </p>
+            <p>
+              In Nicaragua, the rhythm is fundamentally different. What an outsider accustomed to speed might initially perceive as inefficiency is actually something far healthier: patience, warmth, and human connection.
+            </p>
+            <p>
+              Moving or living here isn't about big grand gestures—it’s made of small, grounded moments: how your local fruit vendor greets you by name, which morning the fisherman brings the fresh snook to the beach, and taking an unhurried hour to enjoy a cold Toña as the Pacific tide turns.
+            </p>
+            <div class="lifestyle-quote-box">
+              <p><em>"Culture shapes our expectations, and our expectations shape how we interpret people. When you slow down, Nicaragua welcomes you with open arms."</em></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: EXPAT COMMUNITIES (4 Rounded Cards)
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="communities">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">WHERE PEOPLE SETTLE</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Expat Hubs &amp; Communities</h2>
+          <p class="editorial_lead-paragraph">
+            Each town possesses a distinctive personality. You don’t need to fit in everywhere—just find the rhythm that matches yours.
+          </p>
+        </div>
+
+        <div class="expat-communities-grid">
+          
+          <div class="community-card">
+            <span class="community-pill">COLONIAL CHARM</span>
+            <h3>Granada</h3>
+            <p>A walkable, historic colonial town beloved by writers, retirees and culture seekers who appreciate restored courtyard homes and vibrant café culture.</p>
+          </div>
+
+          <div class="community-card">
+            <span class="community-pill">UNIVERSITY ENERGY</span>
+            <h3>León</h3>
+            <p>A spirited, intellectual working city with historic university energy, authentic local markets, and immediate access to Las Peñitas beach.</p>
+          </div>
+
+          <div class="community-card">
+            <span class="community-pill">ACTIVE COASTAL HUB</span>
+            <h3>San Juan del Sur</h3>
+            <p>The Pacific hub for digital nomads, entrepreneurs, surfers, and families seeking an active coastal lifestyle with abundant international dining.</p>
+          </div>
+
+          <div class="community-card">
+            <span class="community-pill">SURF &amp; CANADIAN COMMUNITY</span>
+            <h3>Popoyo &amp; Emerald Coast</h3>
+            <p>A tranquil, tightly knit coastal village home to an inspiring Canadian expat community around spots like Loose Moose, bound by tide charts and sunsets.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: LANGUAGE & CULTURE (Navy Section)
+         ========================================== -->
+    <section class="section_editorial section-colorway-navy pv-large" id="culture">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center text-white">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">CONNECTING DEEPLY</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large" style="color: #FFFFFF !important;">Language &amp; Cultural Immersion</h2>
+          <p class="editorial_lead-paragraph" style="color: rgba(255,255,255,0.92) !important;">
+            A modest effort creates a completely different experience in Central America.
+          </p>
+        </div>
+
+        <div class="navy-two-column-grid">
+
+          <div class="navy-content-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>The Power of Conversational Effort</h3>
+            <p>
+              In many parts of the world, making an imperfect language attempt can feel awkward. Nicaragua is the opposite: when you try speaking even a few basic Spanish phrases, the patience, consideration, and genuine warmth you receive are remarkable.
+            </p>
+            <p>
+              Learn how to order food, greet shopkeepers, ask directions, and express gratitude. That simple courtesy immediately breaks barriers and shows you respect the place you are visiting.
+            </p>
+          </div>
+
+          <div class="navy-content-card">
+            <div class="navy-card-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Being a Gracious Guest</h3>
+            <p>
+              Patience is your most valuable asset. If you expect Western fast-food urgency, you will feel frustrated. If you recognize that a slower pace allows people to be present with one another, everyday errands become enjoyable social interactions.
+            </p>
+            <p>
+              Listen, smile, don't rush conversations, and remember you are entering a community with deep-rooted traditions and mutual respect.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: PRACTICAL HACKS & REAL CHALLENGES (4 Tip Cards)
+         ========================================== -->
+    <section class="section_editorial section-colorway-ivory pv-large" id="practical-hacks">
+      <div class="container-large padding-global">
+        <div class="editorial_header-wrap text-center">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">HARD-WON LESSONS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Practical Hacks &amp; Real Challenges</h2>
+          <p class="editorial_lead-paragraph">
+            Every destination has its quirks. Preparing for them turns potential headaches into effortless travel habits.
+          </p>
+        </div>
+
+        <div class="practical-tips-grid">
+
+          <div class="tip-card">
+            <div class="tip-number-badge">01</div>
+            <h3>Heat &amp; Breathable Clothing</h3>
+            <p>From March through October, temperatures in Granada, Managua and San Juan del Sur are tropical. Leave heavy denim jeans at home—pack breathable linen and lightweight cottons to stay comfortable.</p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-number-badge">02</div>
+            <h3>The Lemongrass Ointment Hack</h3>
+            <p>On a trip to Matagalpa, I started using local lemongrass ointment instead of chemical repellent. It keeps mosquitoes at bay naturally while doubling as an excellent daily moisturizer.</p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-number-badge">03</div>
+            <h3>Confirm Currency &amp; Conversions</h3>
+            <p>Both US Dollars and Nicaraguan Córdoba (NIO) circulate freely. Don't be shy about pulling out a phone calculator or currency converter to confirm the price slowly before handing over cash.</p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-number-badge">04</div>
+            <h3>Use inDrive for Transportation</h3>
+            <p>Street taxis worldwide test what foreigners will pay. Install inDrive: it works like Uber, locks in an upfront agreed fare, and eliminates awkward negotiations entirely.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: COST OF LIVING (Clean Card)
+         ========================================== -->
+    <section class="section_editorial section-colorway-white pv-large" id="cost-of-living">
+      <div class="container-large padding-global">
+        <div class="cost-of-living-card">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">TRANSPARENT INSIGHTS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Cost of Living in Nicaragua</h2>
+          <p class="editorial_lead-paragraph">
+            Nicaragua remains one of the most affordable countries in Central America for housing, fresh tropical produce, healthcare, and domestic services.
+          </p>
+
+          <div class="cost-placeholder-box">
+            <div class="cost-badge-coming-soon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>DETAILED BREAKDOWN COMING SOON</span>
+            </div>
+            <p>
+              Rather than quoting generic estimates that fluctuate with lifestyle choices, I am currently compiling a comprehensive, itemized breakdown based on real utility bills, grocery receipts, property taxes, and dining costs across Granada, San Juan del Sur, and Popoyo.
+            </p>
+            <div class="cost-checklist-preview">
+              <div class="cost-item-check"><i class="fa-solid fa-check"></i> Long-Term Rental Ranges (Beach vs. Colonial Town)</div>
+              <div class="cost-item-check"><i class="fa-solid fa-check"></i> Utility Costs (Electricity, High-Speed Starlink/Fibre, Water)</div>
+              <div class="cost-item-check"><i class="fa-solid fa-check"></i> Grocery &amp; Local Market Baskets</div>
+              <div class="cost-item-check"><i class="fa-solid fa-check"></i> Private Health Insurance &amp; Medical Consultations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: SANDBIRD LIFESTYLE (Image-Led Band)
+         ========================================== -->
+    <section class="sandbird-lifestyle-band" id="sandbird">
+      <div class="container-large padding-global">
+        <div class="sandbird-content text-center">
+          <span class="sandbird-tag">THE FOUNDER'S PHILOSOPHY</span>
+          <h2 class="sandbird-title">The "Sandbird" Lifestyle</h2>
+          <p class="sandbird-desc">
+            Part snowbird, part beach bum, part lifelong traveller. The idea is simple: live between two places you love. Spend part of your year in Florida, part of your year in Nicaragua, and build a life that lets you enjoy the best of both worlds.
+          </p>
+          <div class="sandbird-highlights">
+            <div class="sandbird-pill"><i class="fa-solid fa-earth-americas"></i> 60+ Countries Explored</div>
+            <div class="sandbird-pill"><i class="fa-solid fa-house-user"></i> Coastal Property Owner</div>
+            <div class="sandbird-pill"><i class="fa-solid fa-plane-departure"></i> Returning Every 3–6 Months</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CLOSING CTA
+         ========================================== -->
+    <section class="section_final-cta" id="contact" style="background-image: url('assets/hero_granada_sunset.jpg');">
+      <div class="final-cta_dark-overlay"></div>
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+          <div class="final-cta_box">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">TAKE THE NEXT STEP</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+            <h2 class="final-cta_heading">Curious What Life Here Could Look Like?</h2>
+            <p class="final-cta_description">
+              Whether you want to connect with local attorneys, chat about community vibes, or ask about purchasing property near the coast.
+            </p>
+            <div class="final-cta_buttons-wrap">
+              <a href="index.html#contact" class="cta_btn-primary">
+                <span>Get in Touch</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="index.html#invest" class="cta_btn-secondary">
+                <span>Explore Property &amp; Investment</span>
+                <i class="fa-solid fa-building"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners
+                in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#" class="footer_social-circle" aria-label="Facebook"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer_social-circle" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#live">Live</a></li>
+                <li><a href="#invest">Invest</a></li>
+                <li><a href="#eat">Eat</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#connections">Connections</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#story">About</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="assets/dest-granada.png" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="#contact">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Consultation Modal Dialog -->
+  <div class="consultation-modal" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge">START A CONVERSATION</span>
+        <h3 id="modal-title">Connect With ZIONNICA</h3>
+        <p>Whether you have travel questions, want restaurant suggestions, or need referrals to trusted attorneys and realtors.</p>
+      </div>
+      <form class="consultation-form" id="consultation-form">
+        <div class="form-group">
+          <label for="form-name">Your Name</label>
+          <input type="text" id="form-name" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label for="form-email">Your Email Address</label>
+          <input type="email" id="form-email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="form-topic">What Can I Help You With?</label>
+          <select id="form-topic" required>
+            <option value="" disabled selected>Select an inquiry type</option>
+            <option value="travel">First-time trip planning or itinerary recommendations</option>
+            <option value="lifestyle">Living in Nicaragua, expat communities and daily rhythm</option>
+            <option value="property">Property considerations, attorneys and due diligence</option>
+            <option value="share">Sharing a favourite restaurant or travel story</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="form-message">Your Message</label>
+          <textarea id="form-message" rows="4" placeholder="Tell me a little about what you are looking for..." required></textarea>
+        </div>
+        <button type="submit" class="cta_btn-primary modal-submit-btn">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

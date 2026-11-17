@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIONNICA - Discover Nicaragua. Find Your Place.</title>
+  <meta name="description"
+    content="From colourful colonial cities and beautiful Pacific beaches to local food, everyday life and new possibilities. Discover Nicaragua with ZIONNICA.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+</head>
+
+<body class="lenis lenis-smooth">
+
+  <!-- ==========================================
+       LOADER COMPONENT
+       ========================================== -->
+  <div class="loader_component" id="loader">
+    <div class="loader_content-wrapper">
+      <img src="assets/logo.png" alt="ZIONNICA Logo" class="loader_image" onerror="this.style.display='none';">
+      <div class="loader_image-overlay"></div>
+    </div>
+    <div class="loader_background"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         EXACT FLOATING PILL NAVBAR WITH DROPDOWNS
+         (Matching the Reference Design)
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation With Interactive Dropdowns -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <!-- 1: HOME -->
+            <a href="index.html#hero" class="nav-item">
+              <span>HOME</span>
+            </a>
+
+            <!-- 2: EXPLORE -->
+            <a href="explore.html" class="nav-item">
+              <span>EXPLORE</span>
+            </a>
+
+            <!-- 3: LIVE -->
+            <a href="live.html" class="nav-item">
+              <span>LIVE</span>
+            </a>
+
+            <!-- 4: INVEST -->
+            <a href="invest.html" class="nav-item">
+              <span>INVEST</span>
+            </a>
+
+            <!-- 5: EXPERIENCE (Dropdown: Eat, Favorites) -->
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 6: CONNECTIONS -->
+            <a href="index.html#connections" class="nav-item">
+              <span>CONNECTIONS</span>
+            </a>
+
+            <!-- 7: JOURNAL -->
+            <a href="index.html#journal" class="nav-item">
+              <span>JOURNAL</span>
+            </a>
+
+            <!-- 8: RESOURCES -->
+            <a href="explore.html#getting-there" class="nav-item">
+              <span>RESOURCES</span>
+            </a>
+
+            <!-- 9: ABOUT -->
+            <a href="index.html#story" class="nav-item">
+              <span>ABOUT</span>
+            </a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions: Contact Me Button & Search Icon -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="nav-search-trigger" id="nav-search-trigger" aria-label="Open Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================
+         SECTION 1: HERO – EXACT SAME AS IMAGE
+         ========================================== -->
+    <section class="hero-image-exact" id="hero">
+
+      <!-- Hero Content Block (Positioned on Left) -->
+      <div class="hero-image-content-container">
+        <div class="hero-text-block">
+
+          <h1 class="hero-main-title">
+            Discover Nicaragua.<br>
+            <span class="hero-highlight-title">Find Your Place.</span>
+          </h1>
+
+          <p class="hero-tagline-desc">
+            From colourful colonial cities and beautiful Pacific beaches to local food, everyday life and new
+            possibilities.
+          </p>
+
+          <div class="hero-action-pair">
+            <a href="#explore" class="hero-btn-primary">
+              <span>Explore Nicaragua</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <button class="hero-btn-story" id="hero-story-trigger">
+              <span class="story-play-circle"><i class="fa-solid fa-play"></i></span>
+              <span class="story-btn-text">Our Story</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Center "Scroll to Explore" Widget -->
+      <div class="scroll-explore-widget" id="scroll-explore-btn">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to Explore</span>
+        <i class="fa-solid fa-chevron-down scroll-chevron"></i>
+      </div>
+
+    </section>
+
+    <!-- Destination Search Drawer (Expandable / Inline) -->
+    <section class="section_destination-search" id="search-section">
+      <div class="search-bar_container">
+        <div class="search-bar_header">
+          <h2 class="search-bar_heading">Planning A Trip, Move, Or New Beginning?</h2>
+          <p class="search-bar_subheading">Search destinations, relocation tips, cost of living, property buying, local
+            food...</p>
+        </div>
+        <div class="search-bar_content">
+          <form id="destination-search-form" class="search-bar_form">
+            <div class="search-bar_input-wrapper">
+              <input type="text" id="destination-search-input" class="search-bar_input"
+                placeholder="Try 'Popoyo', 'San Juan del Sur', 'Granada', 'Expat Life', 'Property'..." required>
+              <button type="submit" class="search-bar_btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                SEARCH
+              </button>
+            </div>
+          </form>
+          <div class="search-bar_popular">
+            <span class="search-bar_popular-label">Popular Topics:</span>
+            <a href="#explore" class="search-bar_popular-link">Popoyo</a> •
+            <a href="#explore" class="search-bar_popular-link">San Juan del Sur</a> •
+            <a href="#explore" class="search-bar_popular-link">Granada</a> •
+            <a href="#live" class="search-bar_popular-link">Expat Community</a> •
+            <a href="#invest" class="search-bar_popular-link">Due Diligence</a> •
+            <a href="#eat" class="search-bar_popular-link">Zion Favorites</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION: CHOOSE YOUR JOURNEY
+         (Premium Photographic Journey Experience)
+         ========================================== -->
+    <section class="section_choose-journey" id="choose-journey">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <!-- Section Introduction -->
+          <div class="journey_header-wrap">
+            <div class="journey_eyebrow-badge">
+              <span class="journey_eyebrow-dash"></span>
+              <span class="journey_eyebrow-text">YOUR NICARAGUA JOURNEY</span>
+              <span class="journey_eyebrow-dash"></span>
+            </div>
+            <h2 class="journey_heading">
+              How Do You Want to Experience Nicaragua?
+            </h2>
+            <p class="journey_lead">
+              Whether you're planning an unforgettable trip, considering a new lifestyle or exploring property
+              opportunities, discover the side of Nicaragua that speaks to you.
+            </p>
+          </div>
+
+          <!-- Master Real Project Split Image Accordion -->
+          <div class="split_accordion-track" id="journey-split-accordion">
+
+            <!-- PANEL 01 — EXPLORE NOW -->
+            <div class="split_panel is-active" data-panel="explore" data-target="#explore">
+              <div class="split_panel-bg">
+                <img src="assets/volcano_adventures.png" alt="Discover Nicaragua - Volcanoes, Lakes & Colonial Heritage"
+                  class="split_panel-img" loading="lazy">
+                <div class="split_panel-overlay"></div>
+                <div class="split_panel-glow"></div>
+              </div>
+
+              <!-- Collapsed Vertical Teaser (visible when collapsed) -->
+              <div class="split_collapsed-teaser">
+                <span class="teaser_num">01</span>
+                <span class="teaser_label">EXPLORE NOW</span>
+                <span class="teaser_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+
+              <!-- Expanded Active Content -->
+              <div class="split_panel-content">
+                <div class="split_top-row">
+                  <span class="split_pill-badge">
+                    <span class="split_pill-dot"></span>
+                    EXPLORE NOW
+                  </span>
+                  <span class="split_index">01</span>
+                </div>
+
+                <div class="split_bottom-row">
+                  <h3 class="split_title">Discover Nicaragua</h3>
+                  <p class="split_desc">
+                    Explore beautiful beaches, colourful colonial cities, volcanic landscapes and unforgettable local
+                    experiences.
+                  </p>
+                  <a href="#explore" class="split_cta-btn" aria-label="Explore Nicaragua">
+                    <span class="split_cta-text">Explore Nicaragua</span>
+                    <span class="split_cta-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 02 — LIVE NOW -->
+            <div class="split_panel" data-panel="live" data-target="#live">
+              <div class="split_panel-bg">
+                <img src="assets/dest-sanjuan.png" alt="Imagine Life Here - Pacific Coast Life & Community"
+                  class="split_panel-img" loading="lazy">
+                <div class="split_panel-overlay"></div>
+                <div class="split_panel-glow"></div>
+              </div>
+
+              <!-- Collapsed Vertical Teaser -->
+              <div class="split_collapsed-teaser">
+                <span class="teaser_num">02</span>
+                <span class="teaser_label">LIVE NOW</span>
+                <span class="teaser_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+
+              <!-- Expanded Active Content -->
+              <div class="split_panel-content">
+                <div class="split_top-row">
+                  <span class="split_pill-badge">
+                    <span class="split_pill-dot"></span>
+                    LIVE NOW
+                  </span>
+                  <span class="split_index">02</span>
+                </div>
+
+                <div class="split_bottom-row">
+                  <h3 class="split_title">Imagine Life Here</h3>
+                  <p class="split_desc">
+                    Discover everyday life, local culture, the cost of living and what it means to make Nicaragua your
+                    home.
+                  </p>
+                  <a href="#live" class="split_cta-btn" aria-label="Explore Living">
+                    <span class="split_cta-text">Explore Living</span>
+                    <span class="split_cta-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PANEL 03 — INVEST NOW -->
+            <div class="split_panel" data-panel="invest" data-target="#invest">
+              <div class="split_panel-bg">
+                <img src="blog-image/luxury villa central america.jpg"
+                  alt="Explore New Possibilities - Luxury Coastal Property & Investment" class="split_panel-img"
+                  loading="lazy">
+                <div class="split_panel-overlay"></div>
+                <div class="split_panel-glow"></div>
+              </div>
+
+              <!-- Collapsed Vertical Teaser -->
+              <div class="split_collapsed-teaser">
+                <span class="teaser_num">03</span>
+                <span class="teaser_label">INVEST NOW</span>
+                <span class="teaser_arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+
+              <!-- Expanded Active Content -->
+              <div class="split_panel-content">
+                <div class="split_top-row">
+                  <span class="split_pill-badge">
+                    <span class="split_pill-dot"></span>
+                    INVEST NOW
+                  </span>
+                  <span class="split_index">03</span>
+                </div>
+
+                <div class="split_bottom-row">
+                  <h3 class="split_title">Explore New Possibilities</h3>
+                  <p class="split_desc">
+                    Learn about property opportunities, buying considerations, due diligence and useful local
+                    connections.
+                  </p>
+                  <a href="#invest" class="split_cta-btn" aria-label="Explore Property">
+                    <span class="split_cta-text">Explore Property</span>
+                    <span class="split_cta-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 2: EXPLORE NICARAGUA (Featured Destinations)
+         ========================================== -->
+    
+
+
+    <!-- ==========================================
+         SECTION 2: FEATURED DESTINATIONS (INTERACTIVE)
+         Reference: Pioneer Expeditions "Our Destinations"
+         ========================================== -->
+    <section id="section-2" class="section-featured-destinations section-colorway-ivory pv-large" id="explore">
+      <div class="feat-dest_container">
+        
+        <!-- Left: Dynamic Big Destination Image -->
+        <div class="feat-dest_left-media">
+          <div class="feat-dest_img-frame">
+            <img id="feat-dest-active-img" 
+                 src="img/IMG-20260909-WA0010.jpg" 
+                 alt="Granada Colonial City" 
+                 class="feat-dest_main-img" 
+                 loading="lazy">
+            <div class="feat-dest_img-badge" id="feat-dest-img-badge">
+              <span class="badge-tag">HIGHLIGHT</span>
+              <span class="badge-title">Granada Colonial City</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Typography Destination List -->
+        <div class="feat-dest_right-content">
+          <div class="feat-dest_title-wrap">
+            <span class="feat-dest_subtitle">OUR DESTINATIONS</span>
+          </div>
+          
+          <ul class="feat-dest_list" id="feat-dest-list">
+            <li class="feat-dest_item is-active" 
+                data-dest-img="img/IMG-20260909-WA0010.jpg" 
+                data-dest-title="Granada Colonial City"
+                data-dest-tag="COLONIAL CHARM">
+              <button type="button" class="feat-dest_btn">GRANADA</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0005.jpg" 
+                data-dest-title="San Juan del Sur Bay &amp; Beaches"
+                data-dest-tag="PACIFIC SURF">
+              <button type="button" class="feat-dest_btn">SAN JUAN DEL SUR</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0015.jpg" 
+                data-dest-title="Ometepe Island Twin Volcanoes"
+                data-dest-tag="NATURE WONDER">
+              <button type="button" class="feat-dest_btn">OMETEPE ISLAND</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0002.jpg" 
+                data-dest-title="León Historic Cathedrals &amp; Volcanoes"
+                data-dest-tag="CULTURE &amp; HISTORY">
+              <button type="button" class="feat-dest_btn">LEÓN</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0023.jpg" 
+                data-dest-title="Popoyo &amp; The Emerald Coast"
+                data-dest-tag="WORLD-CLASS WAVES">
+              <button type="button" class="feat-dest_btn">POPOYO &amp; EMERALD COAST</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0045.jpg" 
+                data-dest-title="Corn Islands Caribbean Sanctuary"
+                data-dest-tag="CARIBBEAN WATERS">
+              <button type="button" class="feat-dest_btn">CORN ISLANDS</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0004.jpg" 
+                data-dest-title="Matagalpa Cloud Forest Highlands"
+                data-dest-tag="COFFEE &amp; HIGHLANDS">
+              <button type="button" class="feat-dest_btn">MATAGALPA</button>
+            </li>
+            <li class="feat-dest_item" 
+                data-dest-img="img/IMG-20260909-WA0035.jpg" 
+                data-dest-title="Somoto Canyon Geologic Wonder"
+                data-dest-tag="RIVER EXPEDITION">
+              <button type="button" class="feat-dest_btn">SOMOTO CANYON</button>
+            </li>
+          </ul>
+
+          <div class="feat-dest_action-wrap">
+            <a href="#contact" class="btn-all-dest">
+              <span>ALL 8 DESTINATIONS</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION: THINGS TO DO & ADVENTURES
+         Award-Winning Editorial Experience Grid
+         ========================================== -->
+    <section class="section_things-to-do" id="things-to-do">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <!-- Section Header -->
+          <div class="editorial_header-wrap">
+            <div class="editorial_eyebrow-badge">
+              <span class="editorial_eyebrow-dash"></span>
+              <span class="editorial_eyebrow-text">AUTHENTIC EXPERIENCES</span>
+              <span class="editorial_eyebrow-dash"></span>
+            </div>
+            <h2 class="editorial_heading">
+              Unforgettable Adventures in Nicaragua.
+            </h2>
+            <p class="editorial_lead">
+              From volcano boarding down black ash slopes to uncrowded Pacific breaks and cloud forest canopy treks, immerse yourself in Nicaragua's most iconic adventures.
+            </p>
+          </div>
+
+          <!-- 4-Card Experience Grid -->
+          <div class="experiences_grid">
+
+            <!-- Card 1: Volcano Boarding -->
+            <a href="#contact" class="experience_card">
+              <div class="exp_img-wrap">
+                <img src="assets/volcano_adventures.png" alt="Volcano Boarding at Cerro Negro, León" class="exp_img" loading="lazy">
+                <div class="exp_overlay-scrim"></div>
+                <span class="exp_badge-top">VOLCANOES</span>
+                <span class="exp_location-tag"><i class="fa-solid fa-location-dot"></i> Cerro Negro, Le&oacute;n</span>
+              </div>
+              <div class="exp_card-body">
+                <div>
+                  <h3 class="exp_card-title">Volcano Boarding at Cerro Negro</h3>
+                  <p class="exp_card-desc">
+                    Hike the black crater rim and carve down Central America's youngest active volcano on a custom wooden board at speeds up to 60 km/h.
+                  </p>
+                </div>
+                <div class="exp_meta-pill">
+                  <span>Pace: <strong>High Thrill</strong></span>
+                  <span>Season: <strong>Year-Round</strong></span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 2: Pacific Surfing -->
+            <a href="#contact" class="experience_card">
+              <div class="exp_img-wrap">
+                <img src="assets/beach_escapes.png" alt="World-Class Surfing in Popoyo and San Juan del Sur" class="exp_img" loading="lazy">
+                <div class="exp_overlay-scrim"></div>
+                <span class="exp_badge-top">SURF &amp; COASTAL</span>
+                <span class="exp_location-tag"><i class="fa-solid fa-location-dot"></i> Popoyo &amp; SJDS</span>
+              </div>
+              <div class="exp_card-body">
+                <div>
+                  <h3 class="exp_card-title">World-Class Pacific Wave Riding</h3>
+                  <p class="exp_card-desc">
+                    Experience 300+ days of steady offshore winds creating legendary point breaks and beginner-friendly beach rollers at Remanso and Maderas.
+                  </p>
+                </div>
+                <div class="exp_meta-pill">
+                  <span>Level: <strong>All Levels</strong></span>
+                  <span>Peak: <strong>May &ndash; Nov</strong></span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 3: Cloud Forest Trekking -->
+            <a href="#contact" class="experience_card">
+              <div class="exp_img-wrap">
+                <img src="assets/dest-ometepe.png" alt="Twin Volcano Trekking & Cloud Forest in Ometepe" class="exp_img" loading="lazy">
+                <div class="exp_overlay-scrim"></div>
+                <span class="exp_badge-top">NATURE &amp; HIKING</span>
+                <span class="exp_location-tag"><i class="fa-solid fa-location-dot"></i> Isla de Ometepe</span>
+              </div>
+              <div class="exp_card-body">
+                <div>
+                  <h3 class="exp_card-title">Ometepe Cloud Forest Trekking</h3>
+                  <p class="exp_card-desc">
+                    Trek ancient pre-Columbian petroglyphs and mist-shrouded crater waterfalls on Volc&aacute;n Maderas, surrounded by howler monkeys and orchids.
+                  </p>
+                </div>
+                <div class="exp_meta-pill">
+                  <span>Guide: <strong>Recommended</strong></span>
+                  <span>Trail: <strong>Crater Lagoon</strong></span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 4: Caribbean Reef Diving -->
+            <a href="#contact" class="experience_card">
+              <div class="exp_img-wrap">
+                <img src="assets/island_getaways.png" alt="Reef Diving and Snorkeling in Corn Islands" class="exp_img" loading="lazy">
+                <div class="exp_overlay-scrim"></div>
+                <span class="exp_badge-top">DIVING &amp; ISLANDS</span>
+                <span class="exp_location-tag"><i class="fa-solid fa-location-dot"></i> Big &amp; Little Corn</span>
+              </div>
+              <div class="exp_card-body">
+                <div>
+                  <h3 class="exp_card-title">Caribbean Coral Reef Diving</h3>
+                  <p class="exp_card-desc">
+                    Immerse in turquoise waters with nurse sharks, eagle rays, and untouched coral gardens alongside relaxed Creole culture and fresh lobster.
+                  </p>
+                </div>
+                <div class="exp_meta-pill">
+                  <span>Visibility: <strong>30m+</strong></span>
+                  <span>Style: <strong>Island Escape</strong></span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Bottom Explorer Row -->
+          <div style="margin-top: 45px; text-align: center;">
+            <a href="#contact" class="editorial_primary-btn">
+              <span>Plan a Custom Adventure</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: FOUNDER STORY – THE STORY BEHIND ZIONNICA
+         (Matching the Exact Design Reference)
+         ========================================== -->
+    <section class="section_founder-story" id="story">
+      <div class="padding-global">
+        <div class="container-large">
+          <div class="founder-story-card">
+
+            <!-- Left Column: Founder Portrait -->
+            <div class="founder-image-col">
+              <div class="founder-image-container">
+                <img src="assets/founder_real.jpg" alt="ZIONNICA Founder in Nicaragua" class="founder-portrait-img"
+                  loading="lazy">
+              </div>
+            </div>
+
+            <!-- Right Column: Story Copy -->
+            <div class="founder-content-col">
+              <div class="founder-eyebrow-row">
+                <span class="founder-red-dash"></span>
+                <span class="founder-eyebrow">THE STORY BEHIND ZIONNICA</span>
+              </div>
+
+              <h2 class="founder-heading">
+                A Journey That Led Me to <span class="founder-highlight">Nicaragua.</span>
+              </h2>
+
+              <p class="founder-paragraph">
+                After exploring more than 60 countries, I discovered something truly special in Nicaragua. For over a
+                decade, I've returned to experience its beauty, culture and people. What started as a travel adventure
+                gradually became a deeper connection. A connection that continues to bring me back.
+              </p>
+
+              <p class="founder-paragraph">
+                Today, Nicaragua is more than just a destination for me. It's a place where I've built memories and
+                found new possibilities. Through ZIONNICA, I share my personal journey and discoveries. And invite you
+                to experience Nicaragua in your own way.
+              </p>
+
+              <div class="founder-actions">
+                <button class="founder-cta-btn" id="read-story-btn">
+                  <span>Discover My Story</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 01: EAT, STAY & EXPERIENCE
+         Editorial Asymmetric Photographic Showcase
+         ========================================== -->
+    <section class="zn zk-eat" id="eat">
+      <div class="zn-wrap">
+        <header class="zk-head">
+          <h2>Experience Nicaragua like a local.</h2>
+          <p class="zn-lead">Where to eat, stay and spend your days, picked from ten years of firsthand visits.</p>
+        </header>
+        <div class="zk-3">
+          <article class="zk-tile">
+            <img src="img/IMG-20260909-WA0060.jpg" alt="Whole red snapper and street food on the Pacific coast" loading="lazy">
+            <h3>Eat: street food and fresh catch</h3>
+            <p>Quesillos in Chontales, vigorón in Granada, red snapper on the sand.</p>
+            <ul class="zk-links"><li><a href="#contact">Maggie's, San Juan del Sur</a></li><li><a href="#contact">El Zaguán, Granada</a></li><li><a href="#contact">Pescado Frito, Boaco</a></li></ul>
+          </article>
+          <article class="zk-tile">
+            <img src="img/IMG-20260909-WA0026.jpg" alt="Colonial courtyard hotels in Granada" loading="lazy">
+            <h3>Stay: courtyards and cliffside villas</h3>
+            <p>Restored 17th-century hotels, or Pacific sunsets from the cliffs.</p>
+            <ul class="zk-links"><li><a href="#contact">HC Liri, San Juan del Sur</a></li><li><a href="#contact">Colonial casas, Granada</a></li><li><a href="#contact">Surf lodges, Popoyo</a></li></ul>
+          </article>
+          <article class="zk-tile">
+            <img src="img/IMG-20260909-WA0050.jpg" alt="Surf break on Nicaragua's Pacific coast" loading="lazy">
+            <h3>Do: uncrowded surf and volcano trails</h3>
+            <p>Steady offshore winds, cloud-forest hikes and clear Caribbean water.</p>
+            <ul class="zk-links"><li><a href="#contact">Surf at Playa Remanso</a></li><li><a href="#contact">Hike Ometepe</a></li><li><a href="#contact">Dive the Corn Islands</a></li></ul>
+          </article>
+        </div>
+        <dl class="zn-favs" id="favorites">
+          <div><dt>Favorite beach</dt><dd>Playa Remanso &amp; Yankee</dd></div>
+          <div><dt>Favorite dining</dt><dd>Maggie's &amp; El Zaguán</dd></div>
+          <div><dt>Favorite stay</dt><dd>HC Liri Ocean Retreat</dd></div>
+          <div><dt>Favorite sunset</dt><dd>Secret Ridge, with a cold Toña</dd></div>
+        </dl>
+      </div>
+    </section><!-- ==========================================
+         SECTION 02: LIVE IN NICARAGUA
+         Split-Screen Editorial Layout with Overlapping Imagery
+         ========================================== -->
+    <section class="zn zk-live" id="live">
+      <div class="zn-wrap zk-live__grid">
+        <header>
+          <h2>Imagine a different way of life.</h2>
+          <p class="zn-lead">What everyday life in Nicaragua is really like, from the cost of living to the people.</p>
+          <p class="zk-small">A little conversational Spanish earns real warmth. Use inDrive for taxis, pack linen, and try lemongrass for mosquitoes.</p>
+          <a class="cta_btn-primary zn-live-btn" href="#contact"><span>Explore Living in Nicaragua</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </header>
+        <div class="zk-stats">
+          <div class="zk-stat"><img src="img/IMG-20260909-WA0005.jpg" alt="Coastal Living" loading="lazy"><b>50–70%</b><span>Lower monthly cost than the US or Europe</span></div>
+          <div class="zk-stat"><img src="img/IMG-20260909-WA0004.jpg" alt="Colonial Life" loading="lazy"><b>10+</b><span>Years living between Florida and Nicaragua</span></div>
+          <div class="zk-stat"><img src="img/IMG-20260909-WA0015.jpg" alt="Island Rhythm" loading="lazy"><b>4</b><span>Expat hubs: San Juan del Sur, Granada, León, Popoyo</span></div>
+          <div class="zk-stat zk-stat--q"><p>“The slower pace feels deeply human… patience, consideration, and time to breathe.”</p><span>ZIONNICA founder</span></div>
+        </div>
+      </div>
+    </section><!-- ==========================================
+         SECTION 03: INVEST & PROPERTY
+         Cinematic Real-Estate Editorial Layout
+         ========================================== -->
+    <section class="zn zk-invest" id="invest">
+      <div class="zn-wrap zk-head">
+        <h2>Discover the possibilities of owning property in Nicaragua.</h2>
+        <p class="zn-lead">From choosing a location to due diligence and legal guidance.</p>
+      </div>
+      <div class="zk-band">
+        <img src="img/IMG-20260909-WA0022.jpg" alt="Contemporary villa on Nicaragua's Pacific coast" loading="lazy">
+        <blockquote>“Ask, trust, but verify.”<cite>The founder's cardinal rule</cite></blockquote>
+      </div>
+      <div class="zn-wrap">
+        <div class="zk-4 zk-why">
+          <div><b>1. Find the right location</b><p>Match the place to your lifestyle: Pacific cliffs, surf parcels or colonial Granada.</p></div>
+          <div><b>2. Buy property and title</b><p>Understand fee-simple title (<em>Escritura Pública</em>), contracts and escrow.</p></div>
+          <div><b>3. Get legal guidance</b><p>Check 30 years of title history, surveys and tax clearance, with a lawyer you trust.</p></div>
+          <div><b>4. Build or manage a home</b><p>Visit finished projects before choosing a builder, and find a reliable rental manager.</p></div>
+        </div>
+        <p class="zn-note">This reflects personal ownership experience. Always hire independent legal counsel and do your own due diligence.</p>
+        <a class="cta_btn-primary zn-invest-btn" href="#contact"><span>Explore Property Insights</span> <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section><!-- ==========================================
+         SECTION 04: ZION CONNECTIONS
+         Refined Editorial Network Composition
+         ========================================== -->
+
+    <!-- ==========================================
+         SECTION 04: ZION CONNECTIONS
+         (Themed Component Matching User Specification)
+         ========================================== -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ffe27a" />
+          <stop offset="100%" stop-color="#f07628" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- ==========================================
+         SECTION 04: ZION CONNECTIONS (8-GRID NETWORK)
+         ========================================== -->
+    <section class="section_connections" id="connections" aria-labelledby="zc-title">
+      <div class="connections_container">
+        <div class="connections_header text-center">
+          <span class="connections_eyebrow">ZION VETTED DIRECTORY</span>
+          <h2 class="connections_title" id="zc-title">Connect with the People Who Know Nicaragua.</h2>
+          <p class="connections_lead">
+            Trusted local contacts for buying, building, relocating, and investing with complete peace of mind.
+          </p>
+        </div>
+        <div class="connections_grid-8">
+          
+          <!-- 1: Realtors -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3 class="connection-card_title">Realtors</h3>
+            <p class="connection-card_desc">Verified real estate agents &amp; coastal land specialists across Nicaragua.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Realtors">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 2: Attorneys -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="connection-card_title">Attorneys</h3>
+            <p class="connection-card_desc">Trusted legal counsel for title verification, power of attorney &amp; residency.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Attorneys">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 3: Business Owners -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="connection-card_title">Business Owners</h3>
+            <p class="connection-card_desc">Local entrepreneurs, hospitality pioneers &amp; essential daily service providers.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Business Owners">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 4: Contractors -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-hammer"></i>
+            </div>
+            <h3 class="connection-card_title">Contractors</h3>
+            <p class="connection-card_desc">Reliable builders, architects, engineers &amp; master craftsmen you can trust.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Contractors">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 5: Property Managers -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <h3 class="connection-card_title">Property Managers</h3>
+            <p class="connection-card_desc">On-ground villa management, rental hosting &amp; year-round property care.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Property Managers">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 6: Tour Operators -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="connection-card_title">Tour Operators</h3>
+            <p class="connection-card_desc">Private catamaran skippers, surf guides, volcano trekking &amp; eco-tours.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Tour Operators">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 7: Restaurants -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="connection-card_title">Restaurants</h3>
+            <p class="connection-card_desc">Beloved beachfront dining, local fondas, seafood chefs &amp; sunset spots.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Restaurants">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 8: Retirees & Expats -->
+          <div class="connection-card">
+            <div class="connection-card_icon-box">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="connection-card_title">Retirees &amp; Expats</h3>
+            <p class="connection-card_desc">Warm expat community members sharing honest living advice &amp; practical wisdom.</p>
+            <a href="#contact" class="connection-card_btn" data-category="Retirees & Expats">
+              <span>Connect</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 05: JOURNAL & RESOURCES
+         Premium Travel Magazine Editorial Layout
+         ========================================== -->
+
+
+    <!-- ==========================================
+         SECTION 05: ZION JOURNAL & STORIES (ASYMMETRIC BLOG LAYOUT)
+         One Big Card on Left, Two Vertical Stacked Cards on Right
+         ========================================== -->
+    <section class="section_editorial section_journal" id="journal">
+      <div class="luxury-container">
+
+        <!-- Section Header -->
+        <div class="luxury-header text-center">
+          <div class="luxury-eyebrow-badge">
+            <span class="luxury-eyebrow-dash"></span>
+            <span class="luxury-eyebrow-text">FIRSTHAND PERSPECTIVES</span>
+            <span class="luxury-eyebrow-dash"></span>
+          </div>
+          <h2 class="luxury-heading">
+            Stories, Lessons &amp; Discoveries from a Decade in Nicaragua.
+          </h2>
+          <p class="luxury-lead">
+            Personal reflections, honest travel notes and the authentic realities of traveling, investing and putting down roots in Central America.
+          </p>
+        </div>
+
+        <!-- Asymmetric Blog Grid: Big Card Left, 2 Cards Right -->
+        <div class="blog_asymmetric-grid">
+
+          <!-- Left Column: Big Featured Card -->
+          <article class="blog_big-card">
+            <div class="blog_big-card-media">
+              <img src="img/IMG-20260909-WA0022.jpg" alt="The Sandbird Philosophy - Living between Florida and Nicaragua" class="blog_big-card-img" loading="lazy">
+              <span class="blog_badge-top">PHILOSOPHY &bull; 6 MIN READ</span>
+            </div>
+            <div class="blog_big-card-body">
+              <span class="blog_category-pill">FOUNDER ESSAY</span>
+              <h3 class="blog_big-card-title">The Sandbird Philosophy: Living Between Two Worlds</h3>
+              <p class="blog_big-card-excerpt">
+                "Part snowbird, part beach bum, part traveler. The idea is simple: live between two places I love. Spend part of my time in Florida, part in Nicaragua, and build a purposeful rhythm that allows me to enjoy the best of both worlds."
+              </p>
+              <div class="blog_card-footer">
+                <div class="blog_author-info">
+                  <img src="assets/founder_real.jpg" alt="Founder" class="author_mini-thumb">
+                  <div>
+                    <strong class="author-name">Zion Founder</strong>
+                    <span class="author-sub">Editorial Reflection</span>
+                  </div>
+                </div>
+                <a href="#story" class="blog_cta-link" onclick="document.getElementById('story-modal-overlay').style.display='flex';">
+                  <span>Read Full Story</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Right Column: Two Vertical Stacked Cards -->
+          <div class="blog_stacked-col">
+            
+            <!-- Card 1 -->
+            <article class="blog_stacked-card">
+              <div class="blog_stacked-card-media">
+                <img src="img/IMG-20260909-WA0004.jpg" alt="Why Nicaragua Feels Like Home" class="blog_stacked-card-img" loading="lazy">
+                <span class="blog_badge-top">TRAVEL &bull; 4 MIN READ</span>
+              </div>
+              <div class="blog_stacked-card-body">
+                <span class="blog_category-pill">DESTINATIONS</span>
+                <h4 class="blog_stacked-card-title">Why Nicaragua Feels Like Home: Lessons from 60+ Countries</h4>
+                <p class="blog_stacked-card-excerpt">
+                  Why out of all the countries in the world, this is the one place that kept calling me back every few months.
+                </p>
+                <a href="#contact" class="blog_cta-link">
+                  <span>Read Article</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="blog_stacked-card">
+              <div class="blog_stacked-card-media">
+                <img src="img/IMG-20260909-WA0005.jpg" alt="Property Realities and Due Diligence" class="blog_stacked-card-img" loading="lazy">
+                <span class="blog_badge-top">PROPERTY &bull; 5 MIN READ</span>
+              </div>
+              <div class="blog_stacked-card-body">
+                <span class="blog_category-pill">REAL ESTATE</span>
+                <h4 class="blog_stacked-card-title">The Cardinal Rule of Property: Ask, Trust but Verify</h4>
+                <p class="blog_stacked-card-excerpt">
+                  Navigating legal counsel, powers of attorney, cadastral surveys and escrow with trusted local professionals.
+                </p>
+                <a href="#contact" class="blog_cta-link">
+                  <span>Read Article</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+
+        <!-- Section CTA -->
+        <div class="journal_bottom-cta text-center">
+          <a href="#contact" class="luxury_btn-primary">
+            <span>Read All Journal Entries</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section><!-- ==========================================
+         SECTION 05: RESOURCES & TRAVEL PLANNING
+         (Exact Match to Design Reference 6b5b7e50.jpg)
+         ========================================== -->
+    <section class="section_guide-resources" id="resources">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <!-- Header -->
+          <div class="guide-header text-center">
+            <div class="guide-eyebrow-wrap">
+              <span class="guide-dash"></span>
+              <span class="guide-eyebrow">PLAN WITH CONFIDENCE</span>
+              <span class="guide-dash"></span>
+            </div>
+            <h2 class="guide-title">
+              Everything You Need to Navigate Nicaragua.
+            </h2>
+            <p class="guide-desc">
+              Practical information, trusted guidance and useful resources to help you plan your visit, navigate
+              everyday life and explore new opportunities in Nicaragua.
+            </p>
+          </div>
+
+          <!-- 2-Column Showcase Grid -->
+          <div class="guide-showcase-grid">
+
+            <!-- Left Column: Large Image Feature -->
+            <div class="guide-image-card">
+              <img src="assets/dest-granada.png" alt="Your Guide to Nicaragua - Granada and Mombacho Volcano"
+                class="guide-img" loading="lazy">
+              <div class="guide-img-scrim"></div>
+              <div class="guide-img-content">
+                <h3 class="guide-card-heading">Your Guide to Nicaragua</h3>
+                <p class="guide-card-caption">Useful information to make your journey easier.</p>
+              </div>
+            </div>
+
+            <!-- Right Column: 6 Structured Resource Items -->
+            <div class="guide-list-col">
+
+              <!-- 01. Getting Here -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">01</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Getting Here</h3>
+                  <p class="guide-item__desc">Flights, airports, entry requirements and travel planning.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 02. Getting Around -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">02</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Getting Around</h3>
+                  <p class="guide-item__desc">Transportation, local travel and getting between destinations.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 03. Money & Essentials -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">03</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Money &amp; Essentials</h3>
+                  <p class="guide-item__desc">Currency, SIM cards, internet and everyday essentials.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 04. Where to Stay -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">04</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Where to Stay</h3>
+                  <p class="guide-item__desc">Accommodation, rentals and finding the right location.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 05. Health & Safety -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">05</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Health &amp; Safety</h3>
+                  <p class="guide-item__desc">Healthcare information, safety guidance and useful contacts.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 06. Living & Legal Resources -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">06</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Living &amp; Legal Resources</h3>
+                  <p class="guide-item__desc">Practical information about residency, property and legal guidance.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <!-- 07. Official Resources -->
+              <a href="#contact" class="guide-item">
+                <div class="guide-item__num-wrap">
+                  <span class="guide-item__num">07</span>
+                  <span class="guide-item__bar"></span>
+                </div>
+                <div class="guide-item__content">
+                  <h3 class="guide-item__title">Official Resources</h3>
+                  <p class="guide-item__desc">Government services, important contacts and official information.</p>
+                </div>
+                <span class="guide-item__arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Full-Width Banner -->
+          <div class="guide-bottom-banner">
+            <div class="banner-volcano-backdrop"></div>
+            <div class="banner-left">
+              <div class="banner-icon-box">
+                <i class="fa-solid fa-suitcase-rolling"></i>
+              </div>
+              <div class="banner-text">
+                <h4 class="banner-title">Planning a trip or considering a move?</h4>
+                <p class="banner-sub">Start with the essential information.</p>
+              </div>
+            </div>
+            <div class="banner-right">
+              <a href="#contact" class="banner-btn">
+                <span>Explore All Resources</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================
+         SECTION 07: GALLERY & VISUAL SHOWCASE
+         Award-Winning Luxury Editorial Photo Wall
+         ========================================== -->
+    <!-- ==========================================
+         SECTION 07: VISUAL GALLERY (PURE PHOTO GRID)
+         Without Text Content on Photos, Images from img Folder
+         ========================================== -->
+    <section class="section_gallery-clean" id="gallery">
+      <div class="gallery_clean-container">
+        
+        <div class="gallery_header text-center">
+          <span class="gallery_eyebrow">CAPTURED MOMENTS</span>
+          <h2 class="gallery_title">Nicaragua Through My Lens</h2>
+          <p class="gallery_subtitle">A decade of unscripted moments, coastlines, surf breaks, and historic towns.</p>
+        </div>
+
+        <div class="gallery_photo-grid">
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0001.jpg" alt="Nicaragua Scene 1" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0004.jpg" alt="Nicaragua Scene 2" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0006.jpg" alt="Nicaragua Scene 3" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0010.jpg" alt="Nicaragua Scene 4" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0014.jpg" alt="Nicaragua Scene 5" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0017.jpg" alt="Nicaragua Scene 6" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0022.jpg" alt="Nicaragua Scene 7" loading="lazy" class="gallery_photo-img">
+          </div>
+          <div class="gallery_photo-item">
+            <img src="img/IMG-20260909-WA0026.jpg" alt="Nicaragua Scene 8" loading="lazy" class="gallery_photo-img">
+          </div>
+        </div>
+
+        <div class="gallery_action-wrap text-center">
+          <a href="#" class="gallery_view-more-btn">
+            <span>VIEW MORE</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section><!-- ==========================================
+         SECTION 06: FINAL CALL TO ACTION
+         Full-Width Cinematic Pacific Sunset Canvas
+         ========================================== -->
+    <section class="section_final-cta" id="contact">
+      <div class="final-cta_bg-wrapper">
+        <img src="assets/footercta.png" alt="Pacific Coast Sunset in Nicaragua" class="final-cta_bg-img" loading="lazy">
+        <div class="final-cta_dark-overlay"></div>
+      </div>
+
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+
+          <div class="final-cta_box">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">YOUR JOURNEY STARTS HERE</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+
+            <h2 class="final-cta_heading">
+              Your Nicaragua Story Starts Here.
+            </h2>
+
+            <p class="final-cta_description">
+              Whether you're planning a visit, considering a new lifestyle or simply curious about Nicaragua, let
+              ZIONNICA help you discover what's possible.
+            </p>
+
+            <!-- Dual Premium CTA Buttons -->
+            <div class="final-cta_buttons-wrap">
+              <button class="cta_btn-primary" id="open-consultation-btn">
+                <span>Let's Connect</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <a href="#explore" class="cta_btn-secondary">
+                <span>Explore Nicaragua</span>
+                <i class="fa-solid fa-compass"></i>
+              </a>
+            </div>
+
+            <!-- Direct Contact Info Strip -->
+            <div class="final-cta_contact-strip">
+              <div class="contact-strip_item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Direct Inquiries: <strong>zionnicaragua@gmail.com</strong></span>
+              </div>
+              <div class="contact-strip_separator">&bull;</div>
+              <div class="contact-strip_item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Location Presence: <strong>Nicaragua (SJDS &bull; Granada) &amp; Florida</strong></span>
+              </div>
+              <div class="contact-strip_separator">&bull;</div>
+              <div class="contact-strip_item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Response Time: <strong>Within 24 Hours</strong></span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         SECTION 07: FOOTER
+         Sophisticated Dark Navy Footer Architecture
+         ========================================== -->
+    <footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners
+                in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#" class="footer_social-circle" aria-label="Facebook"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer_social-circle" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#live">Live</a></li>
+                <li><a href="#invest">Invest</a></li>
+                <li><a href="#eat">Eat</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#connections">Connections</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#story">About</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="img/IMG-20260909-WA0010.jpg" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="#contact">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Story Modal Dialog -->
+  <div id="story-modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom">
+      <button class="modal-close-btn" id="story-modal-close" aria-label="Close modal">&times;</button>
+      <span class="about_small-label" style="color: #C43D46; font-family: 'Poppins', sans-serif; font-weight: 700;">THE
+        ZIONNICA STORY</span>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 2rem; color: #102B43; margin: 10px 0 16px 0; font-weight: 800;">
+        Discover. Explore. Connect. Put Down Roots.
+      </h3>
+      <div class="story-modal-body" style="font-family: 'Manrope', sans-serif; color: #486581; line-height: 1.8; max-height: 60vh; overflow-y: auto; padding-right: 12px;">
+        <p><strong>Welcome to ZIONNICA</strong>—a place where travel, nature, community, and the pursuit of a meaningful life come together.</p>
+        
+        <p>My love for travel began in college, when I had the opportunity to study abroad in Switzerland. What started as one experience quickly turned into a passion for seeing the world. During my time in Europe, I traveled throughout much of the EU, and when I returned home after college, I made myself a promise: as long as I was able, I would visit one or two new countries every year.</p>
+        
+        <p>For more than a decade, I kept that promise—and often exceeded it. Today, I've had the opportunity to visit more than 60 countries. I've experienced incredible places, met amazing people, eaten unforgettable food, and learned that sometimes the most meaningful parts of travel aren't the places you check off a list, but the places that keep calling you back.</p>
+        
+        <p>And for me, one of those places has been Nicaragua. For more than ten years, I've traveled throughout Nicaragua and Central America. I've returned to places I've loved, explored places I'd never seen, and spent time getting to know the people and communities that make these countries special, revisiting consistently every 3 to 6 months.</p>
+        
+        <blockquote style="border-left: 3px solid #C43D46; margin: 18px 0; padding-left: 16px; font-style: italic; color: #102B43; font-weight: 600;">
+          "Over time, I found myself facing a dilemma that many travelers eventually encounter: Do I keep chasing new destinations, or do I return to the places that already feel like home?"
+        </blockquote>
+        
+        <p>Eventually, I decided to put more than just my time into that relationship—I purchased property near the coast. Today, Nicaragua isn't simply somewhere I enjoy visiting; it's a place where I'm building toward a future.</p>
+        
+        <p>I jokingly created my own word for what I'm working toward: <strong>The Sandbird</strong>—part snowbird, part beach bum, part traveler. The idea is simple: live between two places I love. Spend part of my time in Florida, part of my time in Nicaragua, and build a life that allows me to enjoy the best of both worlds.</p>
+        
+        <p>Along the way, I discovered that many people share this exact dream: travelers, second-home seekers, retirees, and people looking to escape the traditional nine-to-five routine. ZIONNICA was created to share what I've learned—from finding vetted attorneys and realtors to hidden beaches, local food, and self-guided itineraries.</p>
+        
+        <div style="background: rgba(23, 107, 134, 0.08); border-radius: 12px; padding: 18px; margin-top: 20px; border-left: 4px solid #176B86;">
+          <p style="margin: 0; font-weight: 700; color: #102B43; font-size: 1.05rem;">
+            "And who knows? Maybe one day I'll see you somewhere in Nicaragua, sitting on a beach, enjoying a cold Toña, and wondering why we didn't do this sooner."
+          </p>
+        </div>
+      </div>
+      <div style="margin-top: 2rem; text-align: right;">
+        <button class="cta_btn-primary"
+          onclick="document.getElementById('story-modal-overlay').style.display = 'none';">Close Story</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Consultation / Inquiry Modal -->
+  <div id="consultation-modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom" style="max-width: 650px;">
+      <button class="modal-close-btn" id="consultation-modal-close" aria-label="Close modal">&times;</button>
+      <span class="about_small-label"
+        style="color: #C43D46; font-family: 'Poppins', sans-serif; font-weight: 700;">CONNECT WITH ZIONNICA</span>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 1.85rem; color: #102B43; margin: 8px 0 14px 0; font-weight: 800;">
+        Let's Start Your Journey.
+      </h3>
+      <p style="font-family: 'Manrope', sans-serif; color: #486581; font-size: 0.95rem; margin-bottom: 20px;">
+        Share your travel dates, relocation questions, or property goals. We respond personally within 24 hours.
+      </p>
+      <form id="consultation-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+          <div>
+            <label
+              style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Your
+              Name *</label>
+            <input type="text" id="consult-name" class="form-control" placeholder="First and last name" required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+          </div>
+          <div>
+            <label
+              style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Email
+              Address *</label>
+            <input type="email" id="consult-email" class="form-control" placeholder="you@example.com" required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+          </div>
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label
+            style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Your
+            Primary Interest *</label>
+          <select id="consult-interest" class="form-control" required
+            style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+            <option value="" disabled selected>Select an option...</option>
+            <option value="Travel Planning">Custom / Self-Guided Travel Planning</option>
+            <option value="Expat Relocation">Expat Living &amp; Relocation Insights</option>
+            <option value="Property Due Diligence">Property Buying &amp; Due Diligence</option>
+            <option value="Local Connections">Vetted Local Connection Introduction</option>
+            <option value="Sharing a Recommendation">Sharing a Story / Recommendation</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label
+            style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Tell
+            Us About Your Journey *</label>
+          <textarea id="consult-message" rows="4" class="form-control"
+            placeholder="Tell us what you're hoping to experience or what questions you have about Nicaragua..."
+            required
+            style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;"></textarea>
+        </div>
+        <button type="submit" class="cta_btn-primary" style="width: 100%; justify-content: center; padding: 14px 28px;">
+          <span>Send Message &bull; Direct to ZIONNICA</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Submission Confirmation Modal -->
+  <div id="modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom" style="text-align: center; max-width: 480px;">
+      <div
+        style="width: 64px; height: 64px; background: rgba(196, 61, 70, 0.1); color: #C43D46; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem auto;">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 1.75rem; color: #102B43; margin-bottom: 0.75rem; font-weight: 800;">
+        Message Received!
+      </h3>
+      <p style="font-family: 'Manrope', sans-serif; color: #486581; margin-bottom: 2rem;">
+        Thank you for reaching out to ZIONNICA. We will review your plans and get back to you personally within 24
+        hours.
+      </p>
+      <button class="cta_btn-primary" onclick="document.getElementById('modal-overlay').style.display = 'none';"
+        style="width: 100%; justify-content: center;">Close</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

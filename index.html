@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIONNICA - Discover Nicaragua. Find Your Place.</title>
+  <meta name="description"
+    content="From colourful colonial cities and beautiful Pacific beaches to local food, everyday life and new possibilities. Discover Nicaragua with ZIONNICA.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="assets/FAVICON.webp">
+</head>
+
+<body class="lenis lenis-smooth">
+
+  <!-- ==========================================
+       LOADER COMPONENT
+       ========================================== -->
+  <div class="loader_component" id="loader">
+    <div class="loader_content-wrapper">
+      <img src="assets/logo.png" alt="ZIONNICA Logo" class="loader_image" onerror="this.style.display='none';">
+      <div class="loader_image-overlay"></div>
+    </div>
+    <div class="loader_background"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ==========================================
+         EXACT FLOATING PILL NAVBAR WITH DROPDOWNS
+         (Matching the Reference Design)
+         ========================================== -->
+    <header class="header_floating-wrap" id="header">
+      <div class="navbar_floating-container">
+
+        <!-- Brand Logo -->
+        <a href="#hero" class="floating-logo" aria-label="ZIONNICA">
+          <img src="assets/zionnica_official_logo.png" alt="ZIONNICA Logo" class="brand-official-logo">
+        </a>
+
+        <!-- Center Navigation With Interactive Dropdowns -->
+        <nav class="floating-nav-menu" id="floating-nav">
+          <div class="mobile-sidebar-header">
+            <div class="mobile-sidebar-brand">
+              <img src="assets/zionnica_official_logo.png" alt="ZIONNICA" class="mobile-sidebar-logo">
+              <span class="mobile-sidebar-name">ZIONNICA</span>
+            </div>
+            <button class="mobile-sidebar-close" id="mobile-sidebar-close" aria-label="Close Menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="mobile-sidebar-links">
+            <!-- 1: HOME -->
+            <a href="index.html#hero" class="nav-item">
+              <span>HOME</span>
+            </a>
+
+            <!-- 2: EXPLORE -->
+            <a href="explore.html" class="nav-item">
+              <span>EXPLORE</span>
+            </a>
+
+            <!-- 3: LIVE -->
+            <a href="live.html" class="nav-item">
+              <span>LIVE</span>
+            </a>
+
+            <!-- 4: INVEST -->
+            <a href="invest.html" class="nav-item">
+              <span>INVEST</span>
+            </a>
+
+            <!-- 5: EXPERIENCE (Dropdown: Eat, Favorites) -->
+            <div class="nav-dropdown">
+              <a href="eat.html" class="nav-item dropdown-trigger">
+                <span>EXPERIENCE</span>
+                <i class="fa-solid fa-chevron-down nav-arrow"></i>
+              </a>
+              <div class="dropdown-menu">
+                <a href="eat.html" class="dropdown-link">
+                  <i class="fa-solid fa-utensils"></i>
+                  <div>
+                    <strong>Eat</strong>
+                    <small>Local food, dining &amp; beach restaurants</small>
+                  </div>
+                </a>
+                <a href="index.html#favorites" class="dropdown-link">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <strong>Favorites</strong>
+                    <small>Curated top picks &amp; local recommendations</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 6: CONNECTIONS -->
+            <a href="index.html#connections" class="nav-item">
+              <span>CONNECTIONS</span>
+            </a>
+
+            <!-- 7: JOURNAL -->
+            <a href="index.html#journal" class="nav-item">
+              <span>JOURNAL</span>
+            </a>
+
+            <!-- 8: RESOURCES -->
+            <a href="explore.html#getting-there" class="nav-item">
+              <span>RESOURCES</span>
+            </a>
+
+            <!-- 9: ABOUT -->
+            <a href="index.html#story" class="nav-item">
+              <span>ABOUT</span>
+            </a>
+          </div>
+
+          <div class="mobile-sidebar-footer">
+            <a href="contact.html" class="mobile-sidebar-cta">
+              <span>CONTACT ME</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Right Side Actions: Contact Me Button & Search Icon -->
+        <div class="floating-nav-actions">
+          <a href="contact.html" class="floating-cta-btn">
+            <span>CONTACT ME</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="nav-search-trigger" id="nav-search-trigger" aria-label="Open Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="floating-mobile-toggle" id="floating-mobile-toggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Nav Backdrop Overlay -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+
+    <!-- ==========================================================================
+         SECTION 1: HERO
+         Full-width Nicaragua coastal photo with dark left-to-right overlay
+         ========================================================================== -->
+    <section class="nm-hero" id="hero">
+      <div class="nm-hero-bg" style="background-image: url('hero-image.png');" role="img" aria-label="Nicaragua Pacific coastline and coastal landscape"></div>
+      <div class="nm-hero-overlay"></div>
+      <div class="container-large padding-global nm-hero-content-wrap">
+        <div class="nm-hero-content reveal-on-scroll">
+          <div class="editorial_eyebrow-badge" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.25);">
+            <span class="editorial_eyebrow-dash" style="background: #D9A441;"></span>
+            <span class="editorial_eyebrow-text" style="color: #FFFFFF;">FIRSTHAND NICARAGUA GUIDE</span>
+            <span class="editorial_eyebrow-dash" style="background: #D9A441;"></span>
+          </div>
+
+          <h1 class="nm-hero-title">Discover. Explore. Connect. Put down roots.</h1>
+          
+          <p class="nm-hero-subtitle">Real, firsthand guidance for traveling, living and investing in Nicaragua, from someone who has been going back for more than ten years.</p>
+          
+          <!-- Search Bar -->
+          <form class="nm-hero-search-form" action="explore.html" method="GET" role="search">
+            <div class="nm-hero-search-box">
+              <i class="fa-solid fa-magnifying-glass nm-search-icon" aria-hidden="true"></i>
+              <input type="text" name="q" class="nm-search-input" placeholder="Where do you want to go in Nicaragua?" aria-label="Where do you want to go in Nicaragua?">
+              <button type="submit" class="cta_btn-primary nm-search-btn" aria-label="Search Nicaragua destinations">
+                <span>Search</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Popular Search Quick Links -->
+          <div class="nm-hero-popular">
+            <span class="nm-popular-label">Popular:</span>
+            <div class="nm-popular-links">
+              <a href="explore.html#sanjuan" class="nm-popular-pill">San Juan del Sur</a>
+              <a href="explore.html#granada" class="nm-popular-pill">Granada</a>
+              <a href="explore.html#ometepe" class="nm-popular-pill">Ometepe</a>
+              <a href="explore.html#popoyo" class="nm-popular-pill">Popoyo</a>
+              <a href="invest.html" class="nm-popular-pill">Buying property</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 2: START PLANNING YOUR TRIP
+         3x3 Grid of photo tiles with one-line caption & dark gradient
+         ========================================================================== -->
+    <section class="nm-section nm-section-planning" id="plan">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">DESTINATION OVERVIEW</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Start Planning Your Trip</h2>
+          <p class="editorial_lead-paragraph">Explore key regions, town rhythms, and travel advice shaped by ten years on the road.</p>
+        </div>
+
+        <div class="nm-tiles-grid">
+          
+          <!-- Tile 1: San Juan del Sur -->
+          <a href="explore.html#sanjuan" class="nm-tile reveal-on-scroll">
+            <img src="assets/dest-sanjuan.png" alt="San Juan del Sur scenic Pacific beach and bay" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">San Juan del Sur</h3>
+              <p class="nm-tile-caption">Beaches, sunsets, nightlife</p>
+            </div>
+          </a>
+
+          <!-- Tile 2: Granada -->
+          <a href="explore.html#granada" class="nm-tile reveal-on-scroll">
+            <img src="assets/dest-granada.png" alt="Colonial yellow cathedral and historic streets in Granada" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Granada</h3>
+              <p class="nm-tile-caption">Colonial streets and great food</p>
+            </div>
+          </a>
+
+          <!-- Tile 3: Ometepe -->
+          <a href="explore.html#ometepe" class="nm-tile reveal-on-scroll">
+            <img src="assets/dest-ometepe.png" alt="Volcanic peaks of Ometepe rising from Lake Nicaragua" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Ometepe</h3>
+              <p class="nm-tile-caption">Volcanoes, hiking, lake life</p>
+            </div>
+          </a>
+
+          <!-- Tile 4: Masaya -->
+          <a href="explore.html#masaya" class="nm-tile reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0016.jpg" alt="Masaya volcanic landscape and artisan markets" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Masaya</h3>
+              <p class="nm-tile-caption">Adventure and craft markets</p>
+            </div>
+          </a>
+
+          <!-- Tile 5: Matagalpa -->
+          <a href="explore.html#matagalpa" class="nm-tile reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0023.jpg" alt="Lush mountain rivers and green hills of Matagalpa" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Matagalpa</h3>
+              <p class="nm-tile-caption">Cool mountain air and waterfalls</p>
+            </div>
+          </a>
+
+          <!-- Tile 6: Popoyo -->
+          <a href="explore.html#popoyo" class="nm-tile reveal-on-scroll">
+            <img src="assets/beach_escapes.png" alt="World-class surf breaks and Pacific shores at Popoyo" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Popoyo</h3>
+              <p class="nm-tile-caption">Surf, calm, Pacific sunsets</p>
+            </div>
+          </a>
+
+          <!-- Tile 7: Living in Nicaragua -->
+          <a href="live.html" class="nm-tile reveal-on-scroll">
+            <img src="assets/retirement_tours.png" alt="Colonial courtyard and expat community life in Nicaragua" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Living in Nicaragua</h3>
+              <p class="nm-tile-caption">Cost of living, expat life, culture</p>
+            </div>
+          </a>
+
+          <!-- Tile 8: Buying property -->
+          <a href="invest.html" class="nm-tile reveal-on-scroll">
+            <img src="blog-image/luxury villa central america.jpg" alt="Coastal home and property investment in Nicaragua" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Buying property</h3>
+              <p class="nm-tile-caption">Due diligence, attorneys, realtors</p>
+            </div>
+          </a>
+
+          <!-- Tile 9: Where to eat -->
+          <a href="eat.html" class="nm-tile reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0006.jpg" alt="Local fresh cuisine and beachfront dining in Nicaragua" class="nm-tile-img" loading="lazy">
+            <div class="nm-tile-overlay"></div>
+            <div class="nm-tile-body">
+              <h3 class="nm-tile-title">Where to eat</h3>
+              <p class="nm-tile-caption">Street food to beach views</p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 3: ABOUT (ZION)
+         Matches User Screenshot 2 Exactly
+         ========================================================================== -->
+    <section class="nm-section nm-section-about" id="story">
+      <div class="container-large padding-global">
+        
+        <div class="nm-about-grid">
+          
+          <!-- Column 1: Portrait Photo (Christ of Mercy Statue) -->
+          <div class="nm-about-photo-wrap reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0048.jpg" alt="Zion at the Christ of the Mercy statue in San Juan del Sur, Nicaragua" class="nm-about-img" loading="lazy">
+          </div>
+
+          <!-- Column 2: Personal Narrative - Exact Text from Screenshot -->
+          <div class="nm-about-content reveal-on-scroll">
+            <h2 class="nm-about-heading">Hello, I’m Zion</h2>
+
+            <p class="nm-about-text">
+              My love for travel began when I studied abroad in Switzerland. I promised myself one or two new countries every year, and I kept that promise for more than a decade. Today I have visited more than 60 countries.
+            </p>
+
+            <p class="nm-about-text">
+              Nicaragua is the place that kept calling me back. I visit every three to six months, I bought property near the coast, and I am building what I call a <strong>Sandbird life</strong>: part snowbird, part beach bum, part traveler, split between Florida and Nicaragua.
+            </p>
+
+            <p class="nm-about-text">
+              ZIONNICA is where I share what I have learned, the people I trust and the mistakes I made, so you can start with better questions.
+            </p>
+
+            <div class="nm-about-action">
+              <a href="#story-modal-overlay" class="cta_btn-primary nm-action-btn" id="read-story-btn">
+                <span>Read my story</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 4: TOP READS + SIDE BOX
+         Two columns: 12 article titles left, Thinking about living here? right
+         ========================================================================== -->
+    <section class="nm-section" id="journal">
+      <div class="container-large padding-global">
+        
+        <div class="nm-topreads-grid">
+          
+          <!-- Left Column: 12 Journal Reads -->
+          <div class="reveal-on-scroll">
+            <h2 class="nm-topreads-title">Top reads from the Journal</h2>
+            
+            <div class="nm-articles-2col">
+              
+              <!-- Left Sub-column -->
+              <div>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>First time in Nicaragua? Start here</span>
+                </a>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Why I skip Managua and where I go instead</span>
+                </a>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Beating the heat and the mosquitoes</span>
+                </a>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>How to use inDrive and avoid taxi surprises</span>
+                </a>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Learning a little Spanish goes a long way</span>
+                </a>
+                <a href="invest.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>My property journey: what I wish I knew</span>
+                </a>
+              </div>
+
+              <!-- Right Sub-column -->
+              <div>
+                <a href="invest.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Questions to ask your realtor</span>
+                </a>
+                <a href="invest.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Why a trusted attorney and a POA matter</span>
+                </a>
+                <a href="eat.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Beach restaurants in San Juan Bay</span>
+                </a>
+                <a href="eat.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Street food worth trying</span>
+                </a>
+                <a href="explore.html" class="nm-article-item">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>Boaco's July festival</span>
+                </a>
+                <a href="#story-modal-overlay" class="nm-article-item" onclick="document.getElementById('read-story-btn').click(); return false;">
+                  <i class="fa-solid fa-chevron-right nm-article-bullet" aria-hidden="true"></i>
+                  <span>The Sandbird idea explained</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Side Box Card -->
+          <div class="nm-living-card reveal-on-scroll">
+            <span class="nm-living-eyebrow">RELOCATION INSIGHTS</span>
+            <h3 class="nm-living-title">Thinking about living here?</h3>
+            
+            <ul class="nm-living-list">
+              <li>
+                <i class="fa-solid fa-location-dot nm-living-list-icon" aria-hidden="true"></i>
+                <span><strong>Where expats live:</strong> Granada, Leon, and San Juan del Sur each offer distinct lifestyles, speeds, and amenities.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-people-roof nm-living-list-icon" aria-hidden="true"></i>
+                <span><strong>Finding community:</strong> Easy ways to connect with friendly locals and welcoming expats across any Nicaraguan town.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-sun nm-living-list-icon" aria-hidden="true"></i>
+                <span><strong>Slower pace:</strong> What unhurried daily living, fresh tropical markets, and genuine peace truly feel like.</span>
+              </li>
+            </ul>
+
+            <a href="live.html" class="cta_btn-primary" style="margin-top: 6px;">
+              <span>Consider living here</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 5: PLAN YOUR TRIP BLOCK
+         Matches User Screenshot 1 Exactly
+         ========================================================================== -->
+    <section class="nm-section nm-section-trip-block" id="trip-block" style="padding-top: 20px;">
+      <div class="container-large padding-global">
+        
+        <div class="nm-plan-block reveal-on-scroll">
+          
+          <!-- Column 1: Photo (Zion on Railing Overlooking Ocean Through Arch) -->
+          <div class="nm-plan-img-wrap">
+            <img src="img/IMG-20260909-WA0027.jpg" alt="Zion overlooking the Pacific ocean in Nicaragua" class="nm-plan-img" loading="lazy">
+          </div>
+
+          <!-- Column 2: Content - Exact Text from Screenshot -->
+          <div class="nm-plan-content">
+            <h2 class="nm-plan-title">Let me help you plan your trip</h2>
+
+            <p class="nm-plan-text">
+              Don’t want a traditional tour? I will build a self-guided itinerary around your interests, drawing on places I have personally explored and people I know across Nicaragua.
+            </p>
+
+            <p class="nm-plan-text">
+              Tell me what you like, how long you have and your budget, and I will point you toward the right towns, restaurants, tours and local professionals.
+            </p>
+
+            <div style="margin-top: 10px;">
+              <a href="contact.html" class="cta_btn-primary nm-action-btn">
+                <span>Request assistance</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 6: WHERE I WOULD SEND MY FRIENDS
+         3 image cards (Best beaches, Things to do, Hidden gems)
+         ========================================================================== -->
+    <section class="nm-section nm-section-ivory" id="recommendations">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">CURATED RECOMMENDATIONS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Where I Would Send My Friends</h2>
+          <p class="editorial_lead-paragraph">Honest recommendations based on more than a decade of exploring every corner of Nicaragua.</p>
+        </div>
+
+        <div class="nm-friends-grid">
+          
+          <!-- Card 1: Best beaches -->
+          <div class="nm-friend-card reveal-on-scroll">
+            <div class="nm-friend-img-wrap">
+              <img src="img/IMG-20260909-WA0001.jpg" alt="Pacific surf beach and golden sand in Nicaragua" class="nm-friend-img" loading="lazy">
+            </div>
+            <div class="nm-friend-card-body">
+              <h3 class="nm-friend-card-title">Best beaches</h3>
+              <p class="nm-friend-card-text">
+                Remanso for gentle waves and sunset beers, Marsella for peaceful solitude, Yankee for uncrowded surf, Madera for lively vibes, and Marajual for breathtaking evening sunsets.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Things to do -->
+          <div class="nm-friend-card reveal-on-scroll">
+            <div class="nm-friend-img-wrap">
+              <img src="assets/volcano_adventures.png" alt="Volcano boarding adventure down black volcanic slopes in Nicaragua" class="nm-friend-img" loading="lazy">
+            </div>
+            <div class="nm-friend-card-body">
+              <h3 class="nm-friend-card-title">Things to do</h3>
+              <p class="nm-friend-card-text">
+                World-class surfing, adrenaline volcano boarding at Cerro Negro, cloud forest volcano hiking, deep-sea fishing, and vibrant snorkeling or diving off pristine shores.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Hidden gems -->
+          <div class="nm-friend-card reveal-on-scroll">
+            <div class="nm-friend-img-wrap">
+              <img src="img/IMG-20260909-WA0024.jpg" alt="Scenic mountains and peaceful inland valleys in Nicaragua" class="nm-friend-img" loading="lazy">
+            </div>
+            <div class="nm-friend-card-body">
+              <h3 class="nm-friend-card-title">Hidden gems</h3>
+              <p class="nm-friend-card-text">
+                The rugged coastlines of Chinandega, the festive cowboy culture of Boaco, the refreshing mountain air and waterfalls of Matagalpa, and the artisanal traditions of Camoapa.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 7: ZION FAVORITES
+         4 items with thick accent border & real project photos (Upper visual enhancement)
+         ========================================================================== -->
+    <section class="nm-section" id="favorites">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">TOP PERSONAL PICKS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Zion Favorites</h2>
+          <p class="editorial_lead-paragraph">The spots I personally return to again and again whenever I'm in Nicaragua.</p>
+        </div>
+
+        <div class="nm-favs-grid">
+          
+          <!-- Favorite 1: Remanso -->
+          <div class="nm-fav-card reveal-on-scroll">
+            <div class="nm-fav-img-wrap">
+              <img src="img/IMG-20260909-WA0007.jpg" alt="Playa Remanso Pacific surf beach and coastal rocks" class="nm-fav-img" loading="lazy">
+            </div>
+            <span class="nm-fav-badge">FAVORITE BEACH</span>
+            <h3 class="nm-fav-title">Remanso</h3>
+            <p class="nm-fav-desc">
+              A secluded, relaxed bay south of San Juan del Sur with gentle surf, cold beers from friendly shacks, and mesmerizing evening skies.
+            </p>
+          </div>
+
+          <!-- Favorite 2: Maggie's -->
+          <div class="nm-fav-card reveal-on-scroll">
+            <div class="nm-fav-img-wrap">
+              <img src="img/IMG-20260909-WA0006.jpg" alt="Fresh whole red snapper and tostones at Maggie's restaurant" class="nm-fav-img" loading="lazy">
+            </div>
+            <span class="nm-fav-badge">FAVORITE RESTAURANT</span>
+            <h3 class="nm-fav-title">Maggie's</h3>
+            <p class="nm-fav-desc">
+              An authentic local staple delivering fresh whole red snapper, crispy tostones, and warm home-style Nicaraguan cooking.
+            </p>
+          </div>
+
+          <!-- Favorite 3: HC Liri -->
+          <div class="nm-fav-card reveal-on-scroll">
+            <div class="nm-fav-img-wrap">
+              <img src="blog-image/luxury villa central america.jpg" alt="HC Liri oceanfront cliffside hotel retreat" class="nm-fav-img" loading="lazy">
+            </div>
+            <span class="nm-fav-badge">FAVORITE HOTEL</span>
+            <h3 class="nm-fav-title">HC Liri</h3>
+            <p class="nm-fav-desc">
+              A serene hillside hotel offering panoramic ocean views, gentle breezes, and unmatched hospitality right near the surf breaks.
+            </p>
+          </div>
+
+          <!-- Favorite 4: Ometepe hike -->
+          <div class="nm-fav-card reveal-on-scroll">
+            <div class="nm-fav-img-wrap">
+              <img src="assets/dest-ometepe.png" alt="Ometepe volcano hiking trail and cloud forest views" class="nm-fav-img" loading="lazy">
+            </div>
+            <span class="nm-fav-badge">FAVORITE ADVENTURE</span>
+            <h3 class="nm-fav-title">Ometepe hike</h3>
+            <p class="nm-fav-desc">
+              Trekking through mystical cloud forests and volcanic ridges for sweeping lake vistas and rewarding wilderness solitude.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 8: TRUSTED CONNECTIONS
+         With resource categories, names and icons (User Request)
+         ========================================================================== -->
+    <section class="nm-section nm-section-ivory" id="connections">
+      <div class="container-large padding-global">
+        
+        <div class="nm-connections-box reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">ON-THE-GROUND CONTACTS</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+
+          <h2 class="nm-connections-title">Trusted Connections</h2>
+
+          <p class="nm-connections-text">
+            Over a decade of traveling and buying property here, I've built personal relationships with realtors, attorneys, property managers, tour operators, and restaurants I know personally and trust to treat you right.
+          </p>
+
+          <!-- Resource Categories Grid with Names & Icons -->
+          <div class="nm-connections-grid">
+            <div class="nm-conn-item">
+              <div class="nm-conn-icon-circle">
+                <i class="fa-solid fa-house-chimney"></i>
+              </div>
+              <h4 class="nm-conn-name">Realtors &amp; Brokers</h4>
+              <p class="nm-conn-sub">Vetted coastal agents for land, homes, and clear titles.</p>
+            </div>
+
+            <div class="nm-conn-item">
+              <div class="nm-conn-icon-circle">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <h4 class="nm-conn-name">Attorneys &amp; Notaries</h4>
+              <p class="nm-conn-sub">Independent legal counsel for contracts, due diligence &amp; POA.</p>
+            </div>
+
+            <div class="nm-conn-item">
+              <div class="nm-conn-icon-circle">
+                <i class="fa-solid fa-key"></i>
+              </div>
+              <h4 class="nm-conn-name">Property Managers</h4>
+              <p class="nm-conn-sub">Bilingual on-site teams for rentals, maintenance &amp; caretaking.</p>
+            </div>
+
+            <div class="nm-conn-item">
+              <div class="nm-conn-icon-circle">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <h4 class="nm-conn-name">Tours &amp; Guides</h4>
+              <p class="nm-conn-sub">Local drivers &amp; guides for volcanoes, surf transfers &amp; trips.</p>
+            </div>
+
+            <div class="nm-conn-item">
+              <div class="nm-conn-icon-circle">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+              <h4 class="nm-conn-name">Local Hospitality</h4>
+              <p class="nm-conn-sub">Family-owned beach restaurants and authentic local favorites.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 26px;">
+            <a href="invest.html" class="cta_btn-primary">
+              <span>Find a resource</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <p class="nm-connections-disclaimer">
+            ZIONNICA provides referrals and resources only. For legal, real estate, financial or medical matters, always do your own due diligence.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 9: GALLERY
+         4-column photo grid with initial 8 photos, Load More button & smooth scroll
+         ========================================================================== -->
+    <section class="nm-section" id="gallery">
+      <div class="container-large padding-global">
+        
+        <div class="editorial_header-wrap text-center reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">AUTHENTIC PERSPECTIVE</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+          <h2 class="editorial_title-large">Nicaragua Through My Lens</h2>
+          <p class="editorial_lead-paragraph">Real glimpses from road trips, coastal bays, and colonial towns captured across a decade.</p>
+        </div>
+
+        <!-- Initial Gallery Grid -->
+        <div class="nm-gallery-grid">
+          
+          <!-- Photo 1: Spans 2x2 -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0004.jpg" alt="Colonial church facade and bell tower against blue sky in Nicaragua" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 2: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0008.jpg" alt="Pacific surf beach and scenic rocky coast" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 3: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0010.jpg" alt="Quiet inland road and mountain scenery" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 4: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0014.jpg" alt="Tropical greenery and hiking trail near volcano" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 5: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0015.jpg" alt="Evening lake view and gentle waves in Nicaragua" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 6: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0017.jpg" alt="Historic cathedral architecture in Granada" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 7: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0018.jpg" alt="Volcano boarding trail on black ash mountain" class="nm-gallery-img" loading="lazy">
+          </div>
+
+          <!-- Photo 8: Single cell -->
+          <div class="nm-gallery-item reveal-on-scroll">
+            <img src="img/IMG-20260909-WA0020.jpg" alt="Coastal fishing boats and Pacific bay waters" class="nm-gallery-img" loading="lazy">
+          </div>
+
+        </div>
+
+        <!-- Hidden Additional Photos Grid (Revealed on Load More Click) -->
+        <div class="nm-gallery-more" id="gallery-more-grid">
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0021.jpg" alt="Sunset reflections over Pacific waves" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0022.jpg" alt="Colonial courtyard and tropical flowers" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0025.jpg" alt="Pacific surf break and green bluffs" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0026.jpg" alt="San Juan del Sur scenic ocean overlook" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0027.jpg" alt="Traditional craft market in Masaya" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0028.jpg" alt="Tropical trail leading to peaceful beach" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0030.jpg" alt="Local wooden boats moored by lake shore" class="nm-gallery-img" loading="lazy">
+          </div>
+          <div class="nm-gallery-item">
+            <img src="img/IMG-20260909-WA0031.jpg" alt="Cool mountain valley landscape in Matagalpa" class="nm-gallery-img" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Load More Action Button -->
+        <div class="text-center" style="margin-top: 34px;">
+          <button type="button" class="cta_btn-secondary" id="gallery-load-more-btn" aria-expanded="false">
+            <span>Load More Photos</span>
+            <i class="fa-solid fa-chevron-down" id="gallery-load-more-icon" aria-hidden="true"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 10: NEWSLETTER
+         Full-width colored section using existing project color
+         ========================================================================== -->
+    <section class="nm-newsletter-section" id="newsletter">
+      <div class="container-large padding-global">
+        
+        <div class="nm-newsletter-wrap reveal-on-scroll">
+          <div class="editorial_eyebrow-badge">
+            <span class="editorial_eyebrow-dash"></span>
+            <span class="editorial_eyebrow-text">WEEKLY ADVICE</span>
+            <span class="editorial_eyebrow-dash"></span>
+          </div>
+
+          <h2 class="nm-newsletter-title">Get my free Nicaragua starter notes</h2>
+
+          <p class="nm-newsletter-desc">
+            Practical advice on routes, border crossings, safety, real costs, and favorite local spots—sent straight to your inbox without spam or fluff.
+          </p>
+
+          <form action="https://formsubmit.co/zionnicaragua@gmail.com" method="POST" class="nm-newsletter-form">
+            <!-- Anti-spam & redirect settings -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Subscriber to Nicaragua Starter Notes">
+            
+            <input type="email" name="email" class="nm-newsletter-input" placeholder="Enter your email address" required aria-label="Your email address">
+            <button type="submit" class="cta_btn-primary nm-newsletter-btn">
+              <span>Send me tips</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SECTION 11: CLOSING CTA (Photographic Background with Dark Overlay)
+         Consistent with all inner pages
+         ========================================================================== -->
+    <section class="section_final-cta" id="contact" style="background-image: url('img/IMG-20260909-WA0005.jpg');">
+      <div class="final-cta_dark-overlay"></div>
+      <div class="padding-global final-cta_content-layer">
+        <div class="container-large text-center">
+          <div class="final-cta_box reveal-on-scroll">
+            <div class="final-cta_eyebrow-badge">
+              <span class="cta_eyebrow-dash"></span>
+              <span class="cta_eyebrow-text">UNTIL NEXT TIME</span>
+              <span class="cta_eyebrow-dash"></span>
+            </div>
+            <h2 class="final-cta_heading">Maybe One Day I'll See You Somewhere in Nicaragua.</h2>
+            <p class="final-cta_description">
+              Until then, explore the destinations, check the lifestyle realities, and start dreaming up your next journey.
+            </p>
+            <div class="final-cta_buttons-wrap">
+              <a href="explore.html" class="cta_btn-primary">
+                <span>Explore Nicaragua</span>
+                <i class="fa-solid fa-compass" aria-hidden="true"></i>
+              </a>
+              <a href="contact.html" class="cta_btn-secondary">
+                <span>Let's Connect</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 07: FOOTER
+         Sophisticated Dark Navy Footer Architecture
+         ========================================== -->
+    <footer class="footer_navy">
+      <div class="padding-global">
+        <div class="container-large">
+
+          <div class="footer_grid-top">
+
+            <!-- Column 1: Brand & Tagline -->
+            <div class="footer_col brand_col">
+              <div class="footer_logo-row">
+                <img src="assets/zionnica_logo_white.png" alt="ZIONNICA Emblem" class="footer_emblem-logo">
+                <span class="footer_logo-title">ZIONNICA</span>
+              </div>
+              <p class="footer_tagline">
+                Discover. Explore. Connect. Put Down Roots.
+              </p>
+              <p class="footer_bio">
+                A personal travel editorial and vetted local network for travelers, future expats, and property owners
+                in Nicaragua.
+              </p>
+              <div class="footer_social-row">
+                <a href="#" class="footer_social-circle" aria-label="Facebook"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="footer_social-circle" aria-label="Instagram"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:zionnicaragua@gmail.com" class="footer_social-circle" aria-label="Email"><i
+                    class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <!-- Column 2: Navigation Links -->
+            <div class="footer_col nav_col">
+              <h4 class="footer_col-title">Navigation</h4>
+              <ul class="footer_nav-list">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#live">Live</a></li>
+                <li><a href="#invest">Invest</a></li>
+                <li><a href="#eat">Eat</a></li>
+                <li><a href="#favorites">Favorites</a></li>
+                <li><a href="#connections">Connections</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#story">About</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Contact Information -->
+            <div class="footer_col contact_col">
+              <h4 class="footer_col-title">Direct Inquiries</h4>
+              <ul class="footer_info-list">
+                <li>
+                  <i class="fa-solid fa-envelope footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Email Address</span>
+                    <a href="mailto:zionnicaragua@gmail.com" class="info_val">zionnicaragua@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-map-pin footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Presence</span>
+                    <span class="info_val">Florida &amp; Nicaragua (SJDS / Granada)</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-shield footer_info-icon"></i>
+                  <div>
+                    <span class="info_label">Trust Guarantee</span>
+                    <span class="info_val">Unbiased &amp; Independent Insights</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 4: Curated Visual Gallery -->
+            <div class="footer_col gallery_col">
+              <h4 class="footer_col-title">Nicaragua Gallery</h4>
+              <div class="footer_gallery-row">
+                <img src="img/IMG-20260909-WA0010.jpg" alt="Colonial Granada" class="footer_gal-thumb">
+                <img src="assets/dest-sanjuan.png" alt="San Juan del Sur" class="footer_gal-thumb">
+                <img src="assets/volcano_adventures.png" alt="Volcano Adventures" class="footer_gal-thumb">
+                <img src="assets/beach_escapes.png" alt="Popoyo Coast" class="footer_gal-thumb">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer_bottom-row">
+            <p class="copyright_text">
+              &copy; 2026 ZIONNICA. All Rights Reserved. Discover. Explore. Connect. Put Down Roots.
+            </p>
+            <div class="footer_legal-links">
+              <a href="#contact">Privacy Policy</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Disclaimer</a>
+              <span class="legal_sep">&bull;</span>
+              <a href="#contact">Terms of Use</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Story Modal Dialog -->
+  <div id="story-modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom">
+      <button class="modal-close-btn" id="story-modal-close" aria-label="Close modal">&times;</button>
+      <span class="about_small-label" style="color: #C43D46; font-family: 'Poppins', sans-serif; font-weight: 700;">THE
+        ZIONNICA STORY</span>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 2rem; color: #102B43; margin: 10px 0 16px 0; font-weight: 800;">
+        Discover. Explore. Connect. Put Down Roots.
+      </h3>
+      <div class="story-modal-body" style="font-family: 'Manrope', sans-serif; color: #486581; line-height: 1.8; max-height: 60vh; overflow-y: auto; padding-right: 12px;">
+        <p><strong>Welcome to ZIONNICA</strong>—a place where travel, nature, community, and the pursuit of a meaningful life come together.</p>
+        
+        <p>My love for travel began in college, when I had the opportunity to study abroad in Switzerland. What started as one experience quickly turned into a passion for seeing the world. During my time in Europe, I traveled throughout much of the EU, and when I returned home after college, I made myself a promise: as long as I was able, I would visit one or two new countries every year.</p>
+        
+        <p>For more than a decade, I kept that promise—and often exceeded it. Today, I've had the opportunity to visit more than 60 countries. I've experienced incredible places, met amazing people, eaten unforgettable food, and learned that sometimes the most meaningful parts of travel aren't the places you check off a list, but the places that keep calling you back.</p>
+        
+        <p>And for me, one of those places has been Nicaragua. For more than ten years, I've traveled throughout Nicaragua and Central America. I've returned to places I've loved, explored places I'd never seen, and spent time getting to know the people and communities that make these countries special, revisiting consistently every 3 to 6 months.</p>
+        
+        <blockquote style="border-left: 3px solid #C43D46; margin: 18px 0; padding-left: 16px; font-style: italic; color: #102B43; font-weight: 600;">
+          "Over time, I found myself facing a dilemma that many travelers eventually encounter: Do I keep chasing new destinations, or do I return to the places that already feel like home?"
+        </blockquote>
+        
+        <p>Eventually, I decided to put more than just my time into that relationship—I purchased property near the coast. Today, Nicaragua isn't simply somewhere I enjoy visiting; it's a place where I'm building toward a future.</p>
+        
+        <p>I jokingly created my own word for what I'm working toward: <strong>The Sandbird</strong>—part snowbird, part beach bum, part traveler. The idea is simple: live between two places I love. Spend part of my time in Florida, part of my time in Nicaragua, and build a life that allows me to enjoy the best of both worlds.</p>
+        
+        <p>Along the way, I discovered that many people share this exact dream: travelers, second-home seekers, retirees, and people looking to escape the traditional nine-to-five routine. ZIONNICA was created to share what I've learned—from finding vetted attorneys and realtors to hidden beaches, local food, and self-guided itineraries.</p>
+        
+        <div style="background: rgba(23, 107, 134, 0.08); border-radius: 12px; padding: 18px; margin-top: 20px; border-left: 4px solid #176B86;">
+          <p style="margin: 0; font-weight: 700; color: #102B43; font-size: 1.05rem;">
+            "And who knows? Maybe one day I'll see you somewhere in Nicaragua, sitting on a beach, enjoying a cold Toña, and wondering why we didn't do this sooner."
+          </p>
+        </div>
+      </div>
+      <div style="margin-top: 2rem; text-align: right;">
+        <button class="cta_btn-primary"
+          onclick="document.getElementById('story-modal-overlay').style.display = 'none';">Close Story</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Consultation / Inquiry Modal -->
+  <div id="consultation-modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom" style="max-width: 650px;">
+      <button class="modal-close-btn" id="consultation-modal-close" aria-label="Close modal">&times;</button>
+      <span class="about_small-label"
+        style="color: #C43D46; font-family: 'Poppins', sans-serif; font-weight: 700;">CONNECT WITH ZIONNICA</span>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 1.85rem; color: #102B43; margin: 8px 0 14px 0; font-weight: 800;">
+        Let's Start Your Journey.
+      </h3>
+      <p style="font-family: 'Manrope', sans-serif; color: #486581; font-size: 0.95rem; margin-bottom: 20px;">
+        Share your travel dates, relocation questions, or property goals. We respond personally within 24 hours.
+      </p>
+      <form id="consultation-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+          <div>
+            <label
+              style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Your
+              Name *</label>
+            <input type="text" id="consult-name" class="form-control" placeholder="First and last name" required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+          </div>
+          <div>
+            <label
+              style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Email
+              Address *</label>
+            <input type="email" id="consult-email" class="form-control" placeholder="you@example.com" required
+              style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+          </div>
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label
+            style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Your
+            Primary Interest *</label>
+          <select id="consult-interest" class="form-control" required
+            style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;">
+            <option value="" disabled selected>Select an option...</option>
+            <option value="Travel Planning">Custom / Self-Guided Travel Planning</option>
+            <option value="Expat Relocation">Expat Living &amp; Relocation Insights</option>
+            <option value="Property Due Diligence">Property Buying &amp; Due Diligence</option>
+            <option value="Local Connections">Vetted Local Connection Introduction</option>
+            <option value="Sharing a Recommendation">Sharing a Story / Recommendation</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label
+            style="display: block; font-family: 'Poppins', sans-serif; font-size: 0.8rem; font-weight: 700; color: #102B43; margin-bottom: 5px;">Tell
+            Us About Your Journey *</label>
+          <textarea id="consult-message" rows="4" class="form-control"
+            placeholder="Tell us what you're hoping to experience or what questions you have about Nicaragua..."
+            required
+            style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #CBD5E1; font-family: 'Manrope', sans-serif;"></textarea>
+        </div>
+        <button type="submit" class="cta_btn-primary" style="width: 100%; justify-content: center; padding: 14px 28px;">
+          <span>Send Message &bull; Direct to ZIONNICA</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Submission Confirmation Modal -->
+  <div id="modal-overlay" class="modal-overlay-custom" style="display: none;">
+    <div class="modal-card-custom" style="text-align: center; max-width: 480px;">
+      <div
+        style="width: 64px; height: 64px; background: rgba(196, 61, 70, 0.1); color: #C43D46; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem auto;">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3
+        style="font-family: 'Poppins', sans-serif; font-size: 1.75rem; color: #102B43; margin-bottom: 0.75rem; font-weight: 800;">
+        Message Received!
+      </h3>
+      <p style="font-family: 'Manrope', sans-serif; color: #486581; margin-bottom: 2rem;">
+        Thank you for reaching out to ZIONNICA. We will review your plans and get back to you personally within 24
+        hours.
+      </p>
+      <button class="cta_btn-primary" onclick="document.getElementById('modal-overlay').style.display = 'none';"
+        style="width: 100%; justify-content: center;">Close</button>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
