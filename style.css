@@ -20515,3 +20515,37 @@ body.nav-open .header_floating-wrap .navbar_floating-container {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+
+/* ==========================================================================
+   MOBILE NEWSLETTER BUTTON FULL WIDTH FIX (USER REQUEST)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nm-newsletter-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .nm-newsletter-input {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .nm-newsletter-btn,
+  .nm-newsletter-form button[type="submit"],
+  .nm-newsletter-form .floating-cta-btn,
+  .nm-newsletter-form .cta_btn-primary {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 14px 28px !important;
+    border-radius: 9999px !important;
+    box-sizing: border-box !important;
+  }
+}
