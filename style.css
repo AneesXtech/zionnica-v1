@@ -20927,3 +20927,82 @@ button.nav-search-trigger {
     box-shadow: 0 4px 15px rgba(196, 61, 70, 0.3) !important;
   }
 }
+
+
+/* ==========================================================================
+   PERFECT FIX FOR DRAWER PEEKING & BACKDROP OVERLAYING DRAWER (USER SCREENSHOTS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Prevent any horizontal leaking */
+  html, body {
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  /* 1. Header sits ABOVE the backdrop */
+  header.header_floating-wrap,
+  .header_floating-wrap,
+  .header_floating-wrap.scrolled {
+    z-index: 9999999 !important;
+  }
+
+  /* 2. Backdrop sits BEHIND the header & drawer */
+  .mobile-nav-backdrop {
+    display: none !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(10, 28, 44, 0.55) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 999990 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.25s ease !important;
+  }
+
+  .mobile-nav-backdrop.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 999990 !important;
+  }
+
+  /* 3. Drawer: COMPLETELY HIDDEN when closed (never peeks out) */
+  .floating-nav-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 82vw !important;
+    max-width: 340px !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background: #FFFFFF !important;
+    box-shadow: -8px 0 35px rgba(0, 0, 0, 0.25) !important;
+    display: none !important;
+    flex-direction: column !important;
+    padding: 20px 20px 30px 20px !important;
+    box-sizing: border-box !important;
+    z-index: 10000000 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+  }
+
+  /* When active: Slides in cleanly in front of backdrop */
+  .floating-nav-menu.active {
+    display: flex !important;
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
